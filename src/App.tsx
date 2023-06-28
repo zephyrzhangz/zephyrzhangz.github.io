@@ -6,7 +6,6 @@ import {
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import theme from "./theme";
 import Content from "./Content";
-import Footer from "./Footer";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
