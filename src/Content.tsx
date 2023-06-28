@@ -61,7 +61,7 @@ export default function Content() {
       <Stack
         align={"center"}
         spacing={{ base: 10, md: 3 }}
-        py={{ base: 20, md: 28 }}
+        py={{ base: 3, md: 8 }}
         direction={{ base: "column", sm: "column", md: "row" }}
       >
         <Flex
@@ -78,7 +78,7 @@ export default function Content() {
             width={{ base: "100%", sm: "80%", md: "60%", lg: "400px" }}
             overflow={"hidden"}
           >
-            {/* <AspectRatio ratio={2}> */}
+            {/* <AspectRatio ratio={0.7}> */}
             <Image
               alt={"Zephyr Zhang"}
               fit={"cover"}
@@ -127,8 +127,16 @@ export default function Content() {
                 Scenes from a Yellow Peril
               </a>
             </i>
-            , <i>I Am Rachel Chu</i> and <i>OTHER [chinese]</i>. Zephyr's
-            writing has featured in{" "}
+            ,{" "}
+            <i>
+              <a
+                href="https://nathanjoe.com/i-am-rachel-chu"
+                style={{ color: "#F56565" }}
+              >
+                I Am Rachel Chu
+              </a>
+            </i>{" "}
+            and <i>OTHER [chinese]</i>. Zephyr's writing has featured in{" "}
             <i>
               <a
                 href="https://www.starlingmag.com/issue-14/zephyr-zhang"
