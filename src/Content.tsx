@@ -38,6 +38,8 @@ const SocialButton = ({
       cursor={"pointer"}
       as={"a"}
       href={href}
+      target="_blank" // Open link in a new tab
+      rel="noopener noreferrer" // Security measure
       display={"inline-flex"}
       alignItems={"center"}
       justifyContent={"center"}
@@ -123,6 +125,8 @@ export default function Content() {
               <a
                 href="https://www.atc.co.nz/auckland-theatre-company/2022/scenes-from-a-yellow-peril/"
                 style={{ color: "#F56565" }}
+                target="_blank" // Open link in a new tab
+                rel="noopener noreferrer" // Security measure
               >
                 Scenes from a Yellow Peril
               </a>
@@ -132,6 +136,8 @@ export default function Content() {
               <a
                 href="https://nathanjoe.com/i-am-rachel-chu"
                 style={{ color: "#F56565" }}
+                target="_blank" // Open link in a new tab
+                rel="noopener noreferrer" // Security measure
               >
                 I Am Rachel Chu
               </a>
@@ -141,6 +147,8 @@ export default function Content() {
               <a
                 href="https://www.starlingmag.com/issue-14/zephyr-zhang"
                 style={{ color: "#F56565" }}
+                target="_blank" // Open link in a new tab
+                rel="noopener noreferrer" // Security measure
               >
                 Starling
               </a>
@@ -150,6 +158,8 @@ export default function Content() {
               <a
                 href="https://www.sweetmammalian.com/issue-nine/zephyr-zhang"
                 style={{ color: "#F56565" }}
+                target="_blank" // Open link in a new tab
+                rel="noopener noreferrer" // Security measure
               >
                 Sweet Mammalian
               </a>
@@ -172,6 +182,8 @@ export default function Content() {
                 <a
                   href="mailto:zephyrzhangz@gmail.com"
                   style={{ textDecoration: "none", color: "inherit" }}
+                  target="_blank" // Open link in a new tab
+                  rel="noopener noreferrer" // Security measure
                 >
                   Contact
                 </a>
