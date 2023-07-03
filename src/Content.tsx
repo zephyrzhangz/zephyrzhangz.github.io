@@ -191,13 +191,13 @@ export default function Content() {
               <Stack direction={"row"} spacing={4}>
                 <SocialButton
                   label={"Instagram"}
-                  href={"instagram.com/klaxoon"}
+                  href={"https://instagram.com/klaxoon"}
                 >
                   <FaInstagram />
                 </SocialButton>
                 <SocialButton
                   label={"Twitter"}
-                  href={"twitter.com/dilfs4minecraft"}
+                  href={"https://twitter.com/zephyrzhangz"}
                 >
                   <FaTwitter />
                 </SocialButton>
