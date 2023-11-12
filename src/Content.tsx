@@ -164,7 +164,19 @@ export default function Content() {
                 Sweet Mammalian
               </a>
             </i>
-            , <i>Mayhem Literary Journal</i>, and a range of independent zines.
+            , <i>Mayhem</i>,{" "}
+            <i>
+              <a
+                href="https://aucklanduniversitypress.co.nz/rapture/"
+                style={{ color: "#F56565" }}
+                target="_blank" // Open link in a new tab
+                rel="noopener noreferrer" // Security measure
+              >
+                Rapture: An Anthology of Performance Poetry from Aotearoa New
+                Zealand (AUP, 2023)
+              </a>
+            </i>
+            , and a range of independent zines.
           </Text>
 
           <Stack
