@@ -7,15 +7,10 @@ import {
   Text,
   Button,
   Image,
-  Icon,
-  IconButton,
-  createIcon,
-  IconProps,
   useColorModeValue,
   useColorMode,
   chakra,
   VisuallyHidden,
-  AspectRatio,
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 import { ReactNode } from "react";
@@ -55,7 +50,6 @@ const SocialButton = ({
 };
 
 export default function Content() {
-  const { colorMode } = useColorMode();
   const textColor = useColorModeValue("black", "white"); // Set the text color based on the color mode
 
   return (
