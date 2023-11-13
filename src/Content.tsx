@@ -167,7 +167,7 @@ export default function Content() {
                 rel="noopener noreferrer" // Security measure
               >
                 Rapture: An Anthology of Performance Poetry from Aotearoa New
-                Zealand (AUP, 2023)
+                Zealand
               </a>
             </i>
             , and a range of independent zines.
