@@ -8,7 +8,6 @@ import {
   Button,
   Image,
   useColorModeValue,
-  useColorMode,
   chakra,
   VisuallyHidden,
 } from "@chakra-ui/react";
@@ -48,6 +47,10 @@ const SocialButton = ({
     </chakra.button>
   );
 };
+
+const CustomSpacer = ({ height }: { height: string }) => (
+  <Box height={height} />
+);
 
 export default function Content() {
   const textColor = useColorModeValue("black", "white"); // Set the text color based on the color mode
@@ -113,8 +116,9 @@ export default function Content() {
           <Text color={textColor}>
             <b>Zephyr Zhang</b> is a writer and performer based in Tāmaki
             Makaurau, whose work explores migrant and queer experiences. Zephyr
-            is both neurodivergent and sleepy. They have performed in the
-            Auckland Theatre Company iteration of{" "}
+            is both neurodivergent and sleepy.
+            <CustomSpacer height="12px" />
+            They have performed in the Auckland Theatre Company iteration of{" "}
             <i>
               <a
                 href="https://www.atc.co.nz/auckland-theatre-company/2022/scenes-from-a-yellow-peril/"
@@ -158,7 +162,7 @@ export default function Content() {
                 Sweet Mammalian
               </a>
             </i>
-            , <i>Mayhem</i>,{" "}
+            , <i>Mayhem</i>, <i>Oscen</i>,{" "}
             <i>
               <a
                 href="https://aucklanduniversitypress.co.nz/rapture/"
@@ -170,7 +174,8 @@ export default function Content() {
                 Zealand
               </a>
             </i>
-            , and a range of independent zines.
+            , and a range of independent zines. They are forthcoming in{" "}
+            <i>The Spinoff</i> and <i>bad apple</i>.
           </Text>
 
           <Stack
