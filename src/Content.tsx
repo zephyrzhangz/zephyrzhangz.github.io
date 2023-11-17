@@ -174,7 +174,7 @@ export default function Content() {
                 Zealand
               </a>
             </i>
-            , and a range of independent zines. They are forthcoming in{" "}
+            , and a range of independent zines. They have poems forthcoming in{" "}
             <i>The Spinoff</i> and <i>bad apple</i>.
           </Text>
 
