@@ -16,7 +16,7 @@ const baseStyle = {
     justifyContent: 'center',
     marginTop: '8px',  // Add more margin top to push the checkbox down
   },
-  seperator: {
+  connector: {
     height: 'calc(100% - 8px)',  // Adjusting the connector height to match the new checkbox position
     position: 'absolute',
     top: '50%',
