@@ -176,6 +176,8 @@ export default function Content() {
             </i>
             , and a range of independent zines. They have poems forthcoming in{" "}
             <i>The Spinoff</i> and <i>bad apple</i>.
+            <CustomSpacer height="12px" />
+            Zephyr also moonlights as a software engineer.
           </Text>
 
           <Stack
