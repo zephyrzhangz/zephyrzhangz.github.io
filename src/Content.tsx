@@ -162,6 +162,17 @@ export default function Content() {
                 Sweet Mammalian
               </a>
             </i>
+            ,{" "}
+            <i>
+              <a
+                href="https://badapple.gay/2023/11/22/i-used-to-shop-at-newmarket-mall-until-i-realised-it-was-a-spaceship-run-by-evil-aliens-and-was-subsequently-abducted/"
+                style={{ color: "#F56565" }}
+                target="_blank" // Open link in a new tab
+                rel="noopener noreferrer" // Security measure
+              >
+                bad apple
+              </a>
+            </i>
             , <i>Mayhem</i>, <i>Oscen</i>,{" "}
             <i>
               <a
@@ -174,10 +185,8 @@ export default function Content() {
                 Zealand
               </a>
             </i>
-            , and a range of independent zines. They have poems forthcoming in{" "}
-            <i>The Spinoff</i> and <i>bad apple</i>.
-            <CustomSpacer height="12px" />
-            Zephyr also moonlights as a software engineer.
+            , and a range of independent zines. They have a poem forthcoming in{" "}
+            <i>The Spinoff</i>.
           </Text>
 
           <Stack
