@@ -189,8 +189,8 @@ export default function Content() {
             <CustomSpacer height="40px" />
             <Box width="full" height="1.25px" bgColor="#F56565" mb={2}></Box>
             <CustomSpacer height="12px" />
-            <b>Upcoming Events:</b> <br></br>
-            Wednesday February 14, 2024 -{" "}
+            <b>Upcoming Events in 2024:</b> <br></br>
+            14 February -{" "}
             <a
               href="https://www.ssbdcamprage.com/poetry-speakeasy"
               style={{ color: "#F56565" }}
@@ -200,7 +200,7 @@ export default function Content() {
               SSBD Poetry Speakeasy
             </a>{" "}
             <br></br>
-            Saturday Feburary 17, 2024 -{" "}
+            Feburary 17 -{" "}
             <a
               href="https://www.ssbdcamprage.com/rage-on-the-page"
               style={{ color: "#F56565" }}
