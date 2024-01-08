@@ -197,7 +197,7 @@ export default function Content() {
               target="_blank" // Open link in a new tab
               rel="noopener noreferrer" // Security measure
             >
-              SSBD Poetry Speakeasy
+              SSBD: Poetry Speakeasy
             </a>{" "}
             <br></br>
             17 Feburary -{" "}
@@ -207,7 +207,16 @@ export default function Content() {
               target="_blank" // Open link in a new tab
               rel="noopener noreferrer" // Security measure
             >
-              SSBD Rage on the Page
+              SSBD: Rage on the Page
+            </a>
+            <br></br>5 May -{" "}
+            <a
+              href="https://www.aucklandartgallery.com/whats-on/event/on-being-chinese-the-poetry"
+              style={{ color: "#F56565" }}
+              target="_blank" // Open link in a new tab
+              rel="noopener noreferrer" // Security measure
+            >
+              Auckland Art Gallery: On Being Chinese
             </a>
           </Text>
 
