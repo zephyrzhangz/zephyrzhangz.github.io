@@ -185,8 +185,30 @@ export default function Content() {
                 Zealand
               </a>
             </i>
-            , and a range of independent zines. They have a poem forthcoming in{" "}
-            <i>The Spinoff</i>.
+            , and a range of independent zines.
+            <CustomSpacer height="40px" />
+            <Box width="full" height="1.25px" bgColor="#F56565" mb={2}></Box>
+            <CustomSpacer height="12px" />
+            <b>Upcoming Events:</b> <br></br>
+            Wednesday February 14, 2024 -{" "}
+            <a
+              href="https://www.ssbdcamprage.com/poetry-speakeasy"
+              style={{ color: "#F56565" }}
+              target="_blank" // Open link in a new tab
+              rel="noopener noreferrer" // Security measure
+            >
+              SSBD Poetry Speakeasy
+            </a>{" "}
+            <br></br>
+            Saturday Feburary 17, 2024 -{" "}
+            <a
+              href="https://www.ssbdcamprage.com/rage-on-the-page"
+              style={{ color: "#F56565" }}
+              target="_blank" // Open link in a new tab
+              rel="noopener noreferrer" // Security measure
+            >
+              SSBD Rage on the Page
+            </a>
           </Text>
 
           <Stack
