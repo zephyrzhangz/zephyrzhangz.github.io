@@ -200,7 +200,7 @@ export default function Content() {
               SSBD Poetry Speakeasy
             </a>{" "}
             <br></br>
-            Feburary 17 -{" "}
+            17 Feburary -{" "}
             <a
               href="https://www.ssbdcamprage.com/rage-on-the-page"
               style={{ color: "#F56565" }}
