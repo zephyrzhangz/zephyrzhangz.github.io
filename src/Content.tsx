@@ -200,6 +200,16 @@ export default function Content() {
               SSBD: Poetry Speakeasy
             </a>{" "}
             <br></br>
+            15 Feburary -{" "}
+            <a
+              href="https://www.instagram.com/p/C171YqBhgX6/"
+              style={{ color: "#F56565" }}
+              target="_blank" // Open link in a new tab
+              rel="noopener noreferrer" // Security measure
+            >
+              bad apple Showcase
+            </a>
+            <br></br>
             17 Feburary -{" "}
             <a
               href="https://www.ssbdcamprage.com/rage-on-the-page"
