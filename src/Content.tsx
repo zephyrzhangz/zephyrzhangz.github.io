@@ -202,7 +202,7 @@ export default function Content() {
             <br></br>
             15 Feburary -{" "}
             <a
-              href="https://www.instagram.com/p/C171YqBhgX6/"
+              href="https://basementtheatre.co.nz/whats-on/bad-apple-presents-the-showcase"
               style={{ color: "#F56565" }}
               target="_blank" // Open link in a new tab
               rel="noopener noreferrer" // Security measure
