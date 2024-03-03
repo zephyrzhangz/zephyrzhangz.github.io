@@ -189,7 +189,7 @@ export default function Content() {
             <CustomSpacer height="40px" />
             <Box width="full" height="1.25px" bgColor="#F56565" mb={2}></Box>
             <CustomSpacer height="12px" />
-            <b>Upcoming Events in 2024:</b> <br></br>
+            <b>2024 Events:</b> <br></br>
             14 February -{" "}
             <a
               href="https://www.ssbdcamprage.com/poetry-speakeasy"
