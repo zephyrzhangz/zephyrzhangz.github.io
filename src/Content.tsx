@@ -154,6 +154,17 @@ export default function Content() {
             ,{" "}
             <i>
               <a
+                href="https://thespinoff.co.nz/books/08-03-2024/the-friday-poem-you-ask-me-if-i-still-love-you-by-zephyr-zhang"
+                style={{ color: "#F56565" }}
+                target="_blank" // Open link in a new tab
+                rel="noopener noreferrer" // Security measure
+              >
+                The Spinoff
+              </a>
+            </i>
+            ,{" "}
+            <i>
+              <a
                 href="https://www.sweetmammalian.com/issue-nine/zephyr-zhang"
                 style={{ color: "#F56565" }}
                 target="_blank" // Open link in a new tab
