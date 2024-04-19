@@ -203,7 +203,7 @@ export default function Content() {
             <b>2024 Events:</b> <br></br>
             14 February -{" "}
             <a
-              href="https://www.ssbdcamprage.com/poetry-speakeasy"
+              href="https://aucklandpride.org.nz/shows/ssbd-poetry-speakeasy/"
               style={{ color: "#F56565" }}
               target="_blank" // Open link in a new tab
               rel="noopener noreferrer" // Security measure
@@ -223,7 +223,7 @@ export default function Content() {
             <br></br>
             17 Feburary -{" "}
             <a
-              href="https://www.ssbdcamprage.com/rage-on-the-page"
+              href="https://aucklandpride.org.nz/shows/ssbd-rage-on-the-page/"
               style={{ color: "#F56565" }}
               target="_blank" // Open link in a new tab
               rel="noopener noreferrer" // Security measure
