@@ -27,13 +27,13 @@ import { ReactNode } from "react";
 export const Read = () => {
   const accentColor = "#F56565";
   return (
-    <Box pt="40px">
+    <Box pt="35px">
       <Accordion allowToggle>
         <AccordionItem borderColor="#F56565">
           <h2>
             <AccordionButton borderColor="#F56565">
               <Box flex="1" textAlign="left">
-                <b>Read</b>
+                <b>Read</b>&nbsp;&nbsp;↳ Online | ▤ Print
               </Box>
               <AccordionIcon />
             </AccordionButton>
@@ -84,7 +84,7 @@ export const Read = () => {
               target="_blank" // Open link in a new tab
               rel="noopener noreferrer" // Security measure
             >
-              ↳ Rapture: An Anthology of Performance Poetry from Aotearoa New
+              ▤ Rapture: An Anthology of Performance Poetry from Aotearoa New
               Zealand
             </a>
             <br />
@@ -93,7 +93,7 @@ export const Read = () => {
               target="_blank" // Open link in a new tab
               rel="noopener noreferrer" // Security measure
             >
-              ↳ Mayhem
+              ▤ Mayhem
             </a>
           </AccordionPanel>
         </AccordionItem>
