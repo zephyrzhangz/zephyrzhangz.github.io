@@ -53,8 +53,8 @@ export default function Content() {
               alt={"Zephyr Zhang"}
               fit={"cover"}
               align={"center"}
-              w={{ base: "90%", md: "90%" }}
-              maxW={{ base: "90%", md: "90%" }} // Set maximum width to control size more directly
+              w={{ base: "95%", md: "95%" }}
+              maxW={{ base: "95%", md: "95%" }} // Set maximum width to control size more directly
               height="auto" // Maintain aspect ratio
               rounded={"md"}
               src={"/Zephyr Zhang.jpg"}
