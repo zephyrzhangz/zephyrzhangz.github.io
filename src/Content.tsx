@@ -26,7 +26,7 @@ export default function Content() {
       align="center"
       justify="center"
       minHeight="100vh" // Ensure that the content is centered vertically across the entire viewport height
-      padding="20px" // Add padding to prevent content from touching the edges
+      padding="10px" // Add padding to prevent content from touching the edges
     >
       <Container maxW={"7xl"}>
         <Flex
@@ -53,8 +53,8 @@ export default function Content() {
               alt={"Zephyr Zhang"}
               fit={"cover"}
               align={"center"}
-              w={{ base: "100%", md: "100%" }}
-              maxW={{ base: "100%", md: "100%" }} // Set maximum width to control size more directly
+              w={{ base: "90%", md: "90%" }}
+              maxW={{ base: "90%", md: "90%" }} // Set maximum width to control size more directly
               height="auto" // Maintain aspect ratio
               rounded={"md"}
               src={"/Zephyr Zhang.jpg"}
