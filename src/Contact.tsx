@@ -51,7 +51,7 @@ const SocialButton = ({
       transition={"background 0.3s ease, border-color 0.3s ease"}
       _hover={{
         bg: useColorModeValue("blackAlpha.200", "transparent"), // Adjust hover background
-        border: "1px solid black",
+        border: `1px solid ${useColorModeValue("black", "white")}`,
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
@@ -99,7 +99,7 @@ export const Contact = () => {
                 transition={"background 0.3s ease, border-color 0.3s ease"}
                 _hover={{
                   bg: useColorModeValue("blackAlpha.200", "transparent"), // Adjust hover background
-                  border: "1px solid black",
+                  border: `1px solid ${useColorModeValue("black", "white")}`,
                 }}
               >
                 Email
