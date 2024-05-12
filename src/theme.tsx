@@ -1,7 +1,22 @@
 import { extendTheme } from "@chakra-ui/react";
+import { accordionTheme } from "./accordionTheme";
 
 // example theme
 const theme = extendTheme({
+  components: {
+    Accordion: accordionTheme,
+  },
+  styles: {
+    global: (props: any) => ({
+      a: {
+        color: "#F56565", // All links will be this color
+        textDecoration: "none", // Optional: removes underline from links
+        _hover: {
+          color: props.colorMode === "dark" ? "gray.200" : "gray.800", // Revert to default text color on hover
+        },
+      },
+    }),
+  },
   colors: {
     transparent: "transparent",
     black: "#000",
