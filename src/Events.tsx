@@ -40,7 +40,7 @@ export const Events = () => {
         <AccordionPanel pb={4}>
           <b>2024</b>
           <br />
-          14 February -{" "}
+          14 Feb -{" "}
           <a
             href="https://aucklandpride.org.nz/shows/ssbd-poetry-speakeasy/"
             target="_blank" // Open link in a new tab
@@ -49,7 +49,7 @@ export const Events = () => {
             SSBD: Poetry Speakeasy
           </a>{" "}
           <br></br>
-          15 Feburary -{" "}
+          15 Feb -{" "}
           <a
             href="https://basementtheatre.co.nz/whats-on/bad-apple-presents-the-showcase"
             target="_blank" // Open link in a new tab
@@ -58,7 +58,7 @@ export const Events = () => {
             bad apple Showcase
           </a>
           <br></br>
-          17 Feburary -{" "}
+          17 Feb -{" "}
           <a
             href="https://aucklandpride.org.nz/shows/ssbd-rage-on-the-page/"
             target="_blank" // Open link in a new tab
@@ -74,7 +74,7 @@ export const Events = () => {
           >
             Auckland Art Gallery: On Being Chinese
           </a>
-          <br></br>30 July to 3 August -{" "}
+          <br></br>30 Jul to 3 Aug -{" "}
           <a
             href="https://basementtheatre.co.nz/whats-on/a-short-history-of-asian-new-zealand-theatre"
             target="_blank" // Open link in a new tab
