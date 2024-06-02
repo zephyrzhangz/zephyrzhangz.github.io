@@ -23,7 +23,6 @@ import {
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 import { ReactNode } from "react";
-import { Steps } from "./Steps";
 
 export const Events = () => {
   const accentColor = "#F56565";
@@ -41,7 +40,7 @@ export const Events = () => {
         <AccordionPanel pb={4}>
           <b>2024</b>
           <br />
-          {/* 14 Feb -{" "}
+          14 Feb -{" "}
           <a
             href="https://aucklandpride.org.nz/shows/ssbd-poetry-speakeasy/"
             target="_blank" // Open link in a new tab
@@ -83,9 +82,6 @@ export const Events = () => {
           >
             A Short History of Asian New Zealand Theatre
           </a>
-          <br></br>
-          <br></br> */}
-          <Steps />
         </AccordionPanel>
       </AccordionItem>
     </Accordion>
