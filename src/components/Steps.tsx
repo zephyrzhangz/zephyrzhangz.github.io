@@ -4,7 +4,6 @@ import {
   StepDescription,
   StepIcon,
   StepIndicator,
-  StepNumber,
   StepSeparator,
   StepStatus,
   StepTitle,
@@ -21,22 +20,22 @@ const steps = [
   {
     title: "15 Feb",
     description: "bad apple Showcase",
-    url: "https://aucklandpride.org.nz/shows/ssbd-poetry-speakeasy/",
+    url: "https://basementtheatre.co.nz/whats-on/bad-apple-presents-the-showcase",
   },
   {
     title: "17 Feb",
     description: "SSBD: Rage on the Page",
-    url: "https://aucklandpride.org.nz/shows/ssbd-poetry-speakeasy/",
+    url: "https://aucklandpride.org.nz/shows/ssbd-rage-on-the-page/",
   },
   {
     title: "5 May",
     description: "Auckland Art Gallery: On Being Chinese",
-    url: "https://aucklandpride.org.nz/shows/ssbd-poetry-speakeasy/",
+    url: "https://www.aucklandartgallery.com/whats-on/event/on-being-chinese-the-poetry",
   },
   {
     title: "30 Jul to 3 Aug",
     description: "A Short History of Asian New Zealand Theatre",
-    url: "https://aucklandpride.org.nz/shows/ssbd-poetry-speakeasy/",
+    url: "https://basementtheatre.co.nz/whats-on/a-short-history-of-asian-new-zealand-theatre",
   },
 ];
 
@@ -60,8 +59,6 @@ export function Steps() {
           <StepIndicator>
             <StepStatus
               complete={<StepIcon />}
-              incomplete={<StepNumber />}
-              active={<StepNumber />}
             />
           </StepIndicator>
 
@@ -72,7 +69,7 @@ export function Steps() {
             </StepDescription>
           </Box>
 
-          <StepSeparator />
+          {/* <StepSeparator /> */}
         </Step>
       ))}
     </Stepper>

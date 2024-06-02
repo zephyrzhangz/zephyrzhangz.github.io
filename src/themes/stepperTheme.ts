@@ -14,14 +14,14 @@ const baseStyle = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: '8px',  // Add more margin top to push the checkbox down
+    marginTop: '19px',  // Add more margin top to push the checkbox down
   },
-  seperator: {
-    height: 'calc(100% - 8px)',  // Adjusting the connector height to match the new checkbox position
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-  },
+  // seperator: {
+  //   height: 'calc(100% - 8px)',  // Adjusting the connector height to match the new checkbox position
+  //   position: 'absolute',
+  //   top: '50%',
+  //   transform: 'translateY(-50%)',
+  // },
   title: {
     fontSize: '11px',
     fontWeight: 'normal',
