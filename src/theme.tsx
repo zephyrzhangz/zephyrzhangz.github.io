@@ -1,10 +1,12 @@
 import { extendTheme } from "@chakra-ui/react";
-import { accordionTheme } from "./accordionTheme";
+import { accordionTheme } from "./themes/accordionTheme";
+import { stepperTheme } from "./themes/stepperTheme";
 
 // example theme
 const theme = extendTheme({
   components: {
     Accordion: accordionTheme,
+    Stepper: stepperTheme,
   },
   styles: {
     global: (props: any) => ({
@@ -26,6 +28,19 @@ const theme = extendTheme({
       // ...
       900: "#171923",
     },
+    zRed: {
+      50: "#ffe5e5", // Lighter shade
+      100: "#fbbcbc", // Lighter shade
+      200: "#f29292", // Lighter shade
+      300: "#ea6969", // Light shade
+      400: "#e14040", // Slightly lighter than the main color
+      500: "#F56565", // Main color
+      600: "#cc4b4b", // Slightly darker than the main color
+      700: "#b33333", // Darker shade
+      800: "#992424", // Darker shade
+      900: "#7d1414", // Darkest shade
+    },
+
     // ...
   },
   fonts: {
