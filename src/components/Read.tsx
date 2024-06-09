@@ -9,20 +9,8 @@ import {
 } from "@chakra-ui/react";
 
 import {
-  Container,
-  Stack,
-  Flex,
   Box,
-  Heading,
-  Text,
-  Button,
-  Image,
-  useColorModeValue,
-  chakra,
-  VisuallyHidden,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
-import { ReactNode } from "react";
 
 export const Read = () => {
   const accentColor = "#F56565";
@@ -77,6 +65,14 @@ export const Read = () => {
               rel="noopener noreferrer" // Security measure
             >
               ↳ bad apple
+            </a>
+            <br />
+            <a
+              href="https://www.otago.ac.nz/press/books/landfall-247-spring-2024"
+              target="_blank" // Open link in a new tab
+              rel="noopener noreferrer" // Security measure
+            >
+              ▤ Landfall
             </a>
             <br />
             <a
