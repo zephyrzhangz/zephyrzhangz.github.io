@@ -121,8 +121,7 @@ export default function Content() {
                   I Am Rachel Chu
                 </a>
               </i>{" "}
-              and <i>OTHER [chinese]</i>. Their writing is published or
-              forthcoming in places like <i>Cordite</i>, <i>Landfall</i>,{" "}
+              and <i>OTHER [chinese]</i>. Their writing is published in places like <i>Cordite</i>, <i>Landfall</i>,{" "}
               <i>Starling</i>, <i>Symposia</i>, and{" "}
               <i>
                 Rapture: An Anthology of Performance Poetry from Aotearoa New

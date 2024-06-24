@@ -28,6 +28,14 @@ export const Read = () => {
           </h2>
           <AccordionPanel pb={4}>
             <a
+              href="https://www.symposiamagazine.com/issue02/zephyr-zhang"
+              target="_blank" // Open link in a new tab
+              rel="noopener noreferrer" // Security measure
+            >
+              ↳ Symposia
+            </a>
+            <br />
+            <a
               href="http://cordite.org.au/poetry/treat/cucumis-sativus-parvus/"
               target="_blank" // Open link in a new tab
               rel="noopener noreferrer" // Security measure

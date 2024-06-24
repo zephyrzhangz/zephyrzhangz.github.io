@@ -74,13 +74,13 @@ export const Events = () => {
           >
             Auckland Art Gallery: On Being Chinese
           </a>
-          <br></br>30 Jul to 3 Aug -{" "}
+          <br></br>4 Jul -{" "}
           <a
-            href="https://basementtheatre.co.nz/whats-on/a-short-history-of-asian-new-zealand-theatre"
+            href="https://www.instagram.com/p/C8lON0QPil3"
             target="_blank" // Open link in a new tab
             rel="noopener noreferrer" // Security measure
           >
-            A Short History of Asian New Zealand Theatre
+            Rat World Launch Party
           </a>
         </AccordionPanel>
       </AccordionItem>
