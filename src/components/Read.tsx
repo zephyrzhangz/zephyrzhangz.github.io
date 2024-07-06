@@ -76,6 +76,15 @@ export const Read = () => {
             </a>
             <br />
             <a
+              href="https://www.ratworldmag.com/shop/p/rat-world-issue-seven"
+              target="_blank" // Open link in a new tab
+              rel="noopener noreferrer" // Security measure
+            >
+              ▤ Rat World
+            </a>
+            <br />
+            <br />
+            <a
               href="https://www.otago.ac.nz/press/books/landfall-247-spring-2024"
               target="_blank" // Open link in a new tab
               rel="noopener noreferrer" // Security measure
