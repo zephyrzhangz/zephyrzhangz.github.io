@@ -80,7 +80,23 @@ export const Events = () => {
             target="_blank" // Open link in a new tab
             rel="noopener noreferrer" // Security measure
           >
-            Rat World Launch Party
+            Rat World 7 Launch Party
+          </a>
+          <br></br>15 Aug -{" "}
+          <a
+            href="https://www.instagram.com/p/C-G7pyaT7D1/"
+            target="_blank" // Open link in a new tab
+            rel="noopener noreferrer" // Security measure
+          >
+            Yellow Lamp Poetry
+          </a>
+          <br></br>23 Aug -{" "}
+          <a
+            href="https://www.timeout.co.nz/upcoming-events/atp2024"
+            target="_blank" // Open link in a new tab
+            rel="noopener noreferrer" // Security measure
+          >
+            All Tomorrow's Poets
           </a>
         </AccordionPanel>
       </AccordionItem>
