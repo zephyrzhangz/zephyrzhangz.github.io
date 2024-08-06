@@ -4,19 +4,12 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  Link,
-  // Other imports remain the same
 } from "@chakra-ui/react";
 
 import {
-  Container,
   Stack,
-  Flex,
   Box,
-  Heading,
-  Text,
   Button,
-  Image,
   useColorModeValue,
   chakra,
   VisuallyHidden,

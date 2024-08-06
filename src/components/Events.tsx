@@ -4,25 +4,11 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  Link,
-  // Other imports remain the same
 } from "@chakra-ui/react";
 
 import {
-  Container,
-  Stack,
-  Flex,
   Box,
-  Heading,
-  Text,
-  Button,
-  Image,
-  useColorModeValue,
-  chakra,
-  VisuallyHidden,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
-import { ReactNode } from "react";
 
 export const Events = () => {
   const accentColor = "#F56565";
@@ -84,7 +70,7 @@ export const Events = () => {
           </a>
           <br></br>15 Aug -{" "}
           <a
-            href="https://www.instagram.com/p/C-G7pyaT7D1/"
+            href="https://events.humanitix.com/yellow-lamp-poetry-volume-03/tickets"
             target="_blank" // Open link in a new tab
             rel="noopener noreferrer" // Security measure
           >
