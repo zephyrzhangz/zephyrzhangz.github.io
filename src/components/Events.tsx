@@ -84,6 +84,14 @@ export const Events = () => {
           >
             All Tomorrow's Poets
           </a>
+          <br></br>1 Sep -{" "}
+          <a
+            href="https://theopenbook.co.nz/events/2024/9/1/starling-issue-18-auckland-launch-party"
+            target="_blank" // Open link in a new tab
+            rel="noopener noreferrer" // Security measure
+          >
+            Starling Issue 18 Launch
+          </a>
         </AccordionPanel>
       </AccordionItem>
     </Accordion>
