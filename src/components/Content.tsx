@@ -107,7 +107,7 @@ export default function Content() {
           >
             <Heading
               lineHeight={1.1}
-              fontWeight={600}
+              fontWeight="bold"
               fontSize={{ base: "4xl", sm: "5xl", lg: "7xl" }}
               width="full"
               paddingLeft={{ base: 2, sm: 4, md: 0 }}
