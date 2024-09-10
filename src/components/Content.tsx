@@ -8,7 +8,12 @@ import {
   Image,
   useColorModeValue,
   VisuallyHidden,
+  Button,
+  Collapse,
+  useDisclosure,
+  Fade,
 } from "@chakra-ui/react";
+import { FaCamera } from "react-icons/fa";
 import { Read } from "./Read";
 import { Events } from "./Events";
 import { Contact } from "./Contact";
@@ -16,6 +21,45 @@ import { Contact } from "./Contact";
 const CustomSpacer = ({ height }: { height: string }) => (
   <Box height={height} />
 );
+
+const ImageWithCaption = () => {
+  const { isOpen, onToggle } = useDisclosure()
+
+  return(
+    <Box textAlign="left" position="relative" width="95%">
+      <Image
+        alt={"Zephyr Zhang"}
+        fit={"cover"}
+        align={"center"}
+        w="100%"
+        height="auto"
+        rounded={"md"}
+        src={"/Zephyr Zhang.jpg"}
+      />
+      <Flex justifyContent="space-between" alignItems="center" mt={0.3}>
+        <Fade in={isOpen}>
+          <Text 
+            fontSize="xs" 
+            color={useColorModeValue("gray.600", "gray.400")}
+            textAlign="center"
+            width="100%"
+          >
+            Photography by Todd Karehana & Julie Zhu
+          </Text>
+        </Fade>
+        <Button 
+          onClick={onToggle} 
+          variant="unstyled" 
+          p={0}
+          minWidth="auto"
+          size="sm"
+        >
+          <FaCamera size={12} />
+        </Button>
+      </Flex>
+    </Box>
+  )
+};
 
 export default function Content() {
   const textColor = useColorModeValue("black", "white");
@@ -49,15 +93,7 @@ export default function Content() {
             mb={{ base: 5, md: 10 }} // Adjust margin for spacing between photo and text
             mr={{ md: 10 }}
           >
-            <Image
-              alt={"Zephyr Zhang"}
-              fit={"cover"}
-              align={"center"}
-              w={{ base: "95%", md: "95%" }}
-              maxW={{ base: "95%", md: "95%" }} // Set maximum width to control size more directly
-              height="auto" // Maintain aspect ratio
-              rounded={"md"}
-              src={"/Zephyr Zhang.jpg"}
+            <ImageWithCaption
             />
           </Box>
           <Stack
@@ -121,8 +157,9 @@ export default function Content() {
                   I Am Rachel Chu
                 </a>
               </i>{" "}
-              and <i>OTHER [chinese]</i>. Their poetry is published in places like <i>Cordite</i>, <i>Landfall</i>,{" "}
-              <i>Starling</i>, <i>Symposia</i>, and{" "}
+              and <i>OTHER [chinese]</i>. Their poetry is published in places
+              like <i>Cordite</i>, <i>Landfall</i>, <i>Starling</i>,{" "}
+              <i>Symposia</i>, and{" "}
               <i>
                 Rapture: An Anthology of Performance Poetry from Aotearoa New
                 Zealand
