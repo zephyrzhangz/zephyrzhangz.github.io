@@ -23,9 +23,9 @@ const CustomSpacer = ({ height }: { height: string }) => (
 );
 
 const ImageWithCaption = () => {
-  const { isOpen, onToggle } = useDisclosure()
+  const { isOpen, onToggle } = useDisclosure();
 
-  return(
+  return (
     <Box textAlign="left" position="relative" width="95%">
       <Image
         alt={"Zephyr Zhang"}
@@ -35,11 +35,12 @@ const ImageWithCaption = () => {
         height="auto"
         rounded={"md"}
         src={"/Zephyr Zhang.jpg"}
+        loading="lazy"
       />
-      <Flex justifyContent="space-between" alignItems="center" mt={0.3}>
+      <Flex justifyContent="space-between" alignItems="center" mt={0.2}>
         <Fade in={isOpen}>
-          <Text 
-            fontSize="xs" 
+          <Text
+            fontSize="xs"
             color={useColorModeValue("gray.600", "gray.400")}
             textAlign="center"
             width="100%"
@@ -47,9 +48,9 @@ const ImageWithCaption = () => {
             Photography by Todd Karehana & Julie Zhu
           </Text>
         </Fade>
-        <Button 
-          onClick={onToggle} 
-          variant="unstyled" 
+        <Button
+          onClick={onToggle}
+          variant="unstyled"
           p={0}
           minWidth="auto"
           size="sm"
@@ -58,7 +59,7 @@ const ImageWithCaption = () => {
         </Button>
       </Flex>
     </Box>
-  )
+  );
 };
 
 export default function Content() {
@@ -90,16 +91,15 @@ export default function Content() {
             maxWidth={{ base: "100%", md: "30%" }} // Adjusting the width of the photo for different screen sizes
             width={{ base: "100%", md: "40%" }}
             overflow={"hidden"}
-            mb={{ base: 5, md: 10 }} // Adjust margin for spacing between photo and text
+            mb={{ base: 2, md: 10 }} // Adjust margin for spacing between photo and text
             mr={{ md: 10 }}
           >
-            <ImageWithCaption
-            />
+            <ImageWithCaption />
           </Box>
           <Stack
             flex={1}
             spacing={{ base: 5, md: 10 }}
-            minHeight={"500px"}
+            minHeight={"3px"}
             justifyContent={"center"} // Center the stack content vertically
             maxWidth={{ base: "100%", md: "40%" }}
             width={{ base: "100%", md: "40%" }}
