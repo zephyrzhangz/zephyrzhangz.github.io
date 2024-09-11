@@ -116,6 +116,7 @@ export default function Content() {
               <Text
                 as={"span"}
                 position={"relative"}
+                letterSpacing={{ base: "0.05em", sm: "normal" }}
                 _after={{
                   content: "''",
                   width: "full",
