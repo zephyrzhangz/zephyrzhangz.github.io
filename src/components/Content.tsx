@@ -140,7 +140,7 @@ export default function Content() {
               Zephyr has performed in the Auckland Theatre Company iteration of{" "}
               <i>
                 <a
-                  href="https://www.atc.co.nz/auckland-theatre-company/2022/scenes-from-a-yellow-peril/"
+                  href="https://www-prod.atc.co.nz/auckland-theatre-company/2022/scenes-from-a-yellow-peril/"
                   target="_blank" // Open link in a new tab
                   rel="noopener noreferrer" // Security measure
                 >
