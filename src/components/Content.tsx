@@ -21,10 +21,6 @@ import { Events } from "./Events";
 import { Contact } from "./Contact";
 import { useEffect, useState } from "react";
 
-const CustomSpacer = ({ height }: { height: string }) => (
-  <Box height={height} />
-);
-
 const ImageWithCaption = () => {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -69,7 +65,6 @@ export default function Content() {
   const [expandedIndex, setExpandedIndex] = useState<number | number[]>(0);
 
   useEffect(() => {
-    console.log(expandedIndex);
     if (expandedIndex === -1) {
       setExpandedIndex(0);
     }
@@ -78,7 +73,7 @@ export default function Content() {
   const handleAccordionChange = (index: number | number[]) => {
     setExpandedIndex(index);
   };
-  
+
   const textColor = useColorModeValue("black", "white");
 
   return (
@@ -153,18 +148,19 @@ export default function Content() {
               minWidth={{ base: "100%", md: "40%" }}
               px={{ base: 2, sm: 4, md: 0 }}
             >
-            <Text color={textColor}>
-            <Accordion               
-            width="100%" 
-              index={expandedIndex}
-              onChange={handleAccordionChange}
-              allowToggle>
-            <About />
-              <Read />
-              <Events />
-              <Contact />
-              </Accordion>
-            </Text>
+              <Text color={textColor}>
+                <Accordion
+                  width="100%"
+                  index={expandedIndex}
+                  onChange={handleAccordionChange}
+                  allowToggle
+                >
+                  <About />
+                  <Read />
+                  <Events />
+                  <Contact />
+                </Accordion>
+              </Text>
             </Box>
           </Stack>
         </Flex>

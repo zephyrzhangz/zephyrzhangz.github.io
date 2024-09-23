@@ -31,14 +31,11 @@ export const About = () => {
           textColor={textColor}
           _hover={{ bg: "transparent" }}
           _focus={{ boxShadow: "none" }}
-        >
-          <Box flex="1" textAlign="left">
-            <b>Zephyr Zhang</b> is a writer and performer based in Tāmaki
-            Makaurau. They are very sleepy and like watching animal TikToks.
-          </Box>
-        </AccordionButton>
+        ></AccordionButton>
       </h2>
       <AccordionPanel p={0}>
+        <b>Zephyr Zhang</b> is a writer and performer based in Tāmaki Makaurau.
+        They are very sleepy and like watching animal TikToks.
         <CustomSpacer height="12px" />
         Zephyr has performed in the Auckland Theatre Company iteration of{" "}
         <i>
@@ -66,6 +63,7 @@ export const About = () => {
           Rapture: An Anthology of Performance Poetry from Aotearoa New Zealand
         </i>
         .
+        <CustomSpacer height="25px" />
       </AccordionPanel>
     </AccordionItem>
   );
