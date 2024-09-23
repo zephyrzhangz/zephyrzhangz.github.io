@@ -13,7 +13,6 @@ import {
 export const Events = () => {
   const accentColor = "#F56565";
   return (
-    <Accordion allowToggle>
       <AccordionItem borderColor="#F56565" borderTopWidth={0}>
         <h2>
           <AccordionButton borderColor="#F56565">
@@ -94,6 +93,5 @@ export const Events = () => {
           </a>
         </AccordionPanel>
       </AccordionItem>
-    </Accordion>
   );
 };

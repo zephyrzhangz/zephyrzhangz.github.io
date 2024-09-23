@@ -1,4 +1,5 @@
 import {
+  Accordion,
   Container,
   Stack,
   Flex,
@@ -14,9 +15,11 @@ import {
   Fade,
 } from "@chakra-ui/react";
 import { FaCamera } from "react-icons/fa";
+import { About } from "./About";
 import { Read } from "./Read";
 import { Events } from "./Events";
 import { Contact } from "./Contact";
+import { useEffect, useState } from "react";
 
 const CustomSpacer = ({ height }: { height: string }) => (
   <Box height={height} />
@@ -63,6 +66,19 @@ const ImageWithCaption = () => {
 };
 
 export default function Content() {
+  const [expandedIndex, setExpandedIndex] = useState<number | number[]>(0);
+
+  useEffect(() => {
+    console.log(expandedIndex);
+    if (expandedIndex === -1) {
+      setExpandedIndex(0);
+    }
+  }, [expandedIndex]);
+
+  const handleAccordionChange = (index: number | number[]) => {
+    setExpandedIndex(index);
+  };
+  
   const textColor = useColorModeValue("black", "white");
 
   return (
@@ -132,44 +148,24 @@ export default function Content() {
               </Text>
               <VisuallyHidden>Zephyr Zhang</VisuallyHidden>
             </Heading>
-            <Text color={textColor} px={{ base: 2, sm: 4, md: 0 }}>
-              {" "}
-              {/* Add padding to the text in smaller screens for better readability */}
-              <b>Zephyr Zhang</b> is a writer and performer based in Tāmaki
-              Makaurau. They are very sleepy and like watching animal TikToks.
-              <CustomSpacer height="12px" />
-              Zephyr has performed in the Auckland Theatre Company iteration of{" "}
-              <i>
-                <a
-                  href="https://www-prod.atc.co.nz/auckland-theatre-company/2022/scenes-from-a-yellow-peril/"
-                  target="_blank" // Open link in a new tab
-                  rel="noopener noreferrer" // Security measure
-                >
-                  Scenes from a Yellow Peril
-                </a>
-              </i>
-              ,{" "}
-              <i>
-                <a
-                  href="https://nathanjoe.com/i-am-rachel-chu"
-                  target="_blank" // Open link in a new tab
-                  rel="noopener noreferrer" // Security measure
-                >
-                  I Am Rachel Chu
-                </a>
-              </i>{" "}
-              and <i>OTHER [chinese]</i>. Their poetry is published in places
-              like <i>Cordite</i>, <i>Landfall</i>, <i>Starling</i>,{" "}
-              <i>Symposia</i>, and{" "}
-              <i>
-                Rapture: An Anthology of Performance Poetry from Aotearoa New
-                Zealand
-              </i>
-              .
+            <Box
+              width="100%"
+              minWidth={{ base: "100%", md: "40%" }}
+              px={{ base: 2, sm: 4, md: 0 }}
+            >
+            <Text color={textColor}>
+            <Accordion               
+            width="100%" 
+              index={expandedIndex}
+              onChange={handleAccordionChange}
+              allowToggle>
+            <About />
               <Read />
               <Events />
               <Contact />
+              </Accordion>
             </Text>
+            </Box>
           </Stack>
         </Flex>
       </Container>

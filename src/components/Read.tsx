@@ -15,8 +15,7 @@ import {
 export const Read = () => {
   const accentColor = "#F56565";
   return (
-    <Box pt="35px">
-      <Accordion allowToggle>
+    <Box pt="25px">
         <AccordionItem borderColor="#F56565">
           <h2>
             <AccordionButton borderColor="#F56565">
@@ -117,7 +116,6 @@ export const Read = () => {
             </a>
           </AccordionPanel>
         </AccordionItem>
-      </Accordion>
     </Box>
   );
 };

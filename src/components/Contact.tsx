@@ -56,8 +56,7 @@ const SocialButton = ({
 export const Contact = () => {
   const accentColor = "#F56565";
   return (
-    <Accordion allowToggle>
-      <AccordionItem borderColor="#F56565" borderTopWidth={0}>
+      <AccordionItem borderColor="#F56565">
         <h2>
           <AccordionButton borderColor="#F56565">
             <Box flex="1" textAlign="left">
@@ -121,6 +120,5 @@ export const Contact = () => {
           </Stack>
         </AccordionPanel>
       </AccordionItem>
-    </Accordion>
   );
 };
