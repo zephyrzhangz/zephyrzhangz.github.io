@@ -63,7 +63,7 @@ export const About = () => {
           Rapture: An Anthology of Performance Poetry from Aotearoa New Zealand
         </i>
         .
-        <CustomSpacer height="25px" />
+        <CustomSpacer height="30px" />
       </AccordionPanel>
     </AccordionItem>
   );
