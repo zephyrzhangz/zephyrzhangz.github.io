@@ -68,6 +68,14 @@ export const Read = () => {
             </a>
             <br />
             <a
+              href="https://www.poetrylabshanghai.com/post/autumn24#:~:text=is%20a%20student.-,The%20air%2C%20thinning,-by%20Zephyr%20Zhang"
+              target="_blank" // Open link in a new tab
+              rel="noopener noreferrer" // Security measure
+            >
+              ↳ Poetry Lab Shanghai
+            </a>
+            <br />
+            <a
               href="https://badapple.gay/2023/11/22/i-used-to-shop-at-newmarket-mall-until-i-realised-it-was-a-spaceship-run-by-evil-aliens-and-was-subsequently-abducted/"
               target="_blank" // Open link in a new tab
               rel="noopener noreferrer" // Security measure
