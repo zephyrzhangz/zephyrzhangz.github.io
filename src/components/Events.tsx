@@ -69,7 +69,7 @@ export const Events = () => {
         </a>
         <br></br>15 Aug -{" "}
         <a
-          href="https://events.humanitix.com/yellow-lamp-poetry-volume-03/tickets"
+          href="https://www.instagram.com/p/C-eXiRszBfF/"
           target="_blank" // Open link in a new tab
           rel="noopener noreferrer" // Security measure
         >
