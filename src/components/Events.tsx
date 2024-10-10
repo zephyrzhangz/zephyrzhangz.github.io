@@ -91,6 +91,14 @@ export const Events = () => {
         >
           Starling Issue 18 Launch
         </a>
+        <br></br>9 Nov -{" "}
+        <a
+          href="https://www.verbwellington.nz/litcrawl-2024-events/sweet-mammalian"
+          target="_blank" // Open link in a new tab
+          rel="noopener noreferrer" // Security measure
+        >
+          Verb LitCrawl - Sweet Mammalian
+        </a>
       </AccordionPanel>
     </AccordionItem>
   );
