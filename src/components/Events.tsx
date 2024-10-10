@@ -97,7 +97,7 @@ export const Events = () => {
           target="_blank" // Open link in a new tab
           rel="noopener noreferrer" // Security measure
         >
-          Verb LitCrawl - Sweet Mammalian
+          Verb LitCrawl: Sweet Mammalian
         </a>
       </AccordionPanel>
     </AccordionItem>
