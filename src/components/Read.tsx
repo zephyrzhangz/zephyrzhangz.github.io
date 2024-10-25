@@ -27,6 +27,14 @@ export const Read = () => {
         </h2>
         <AccordionPanel pb={4}>
         <a
+            href="https://www.frontierpoetry.com/2024/10/25/zephyr-zhang/"
+            target="_blank" // Open link in a new tab
+            rel="noopener noreferrer" // Security measure
+          >
+            ↳ Frontier Poetry
+          </a>
+          <br />
+        <a
             href="https://cartridgelit.com/2024/10/23/animal-crossing/"
             target="_blank" // Open link in a new tab
             rel="noopener noreferrer" // Security measure
