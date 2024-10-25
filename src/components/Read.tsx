@@ -26,6 +26,14 @@ export const Read = () => {
           </AccordionButton >
         </h2>
         <AccordionPanel pb={4}>
+        <a
+            href="https://cartridgelit.com/2024/10/23/animal-crossing/"
+            target="_blank" // Open link in a new tab
+            rel="noopener noreferrer" // Security measure
+          >
+            ↳ Cartridge Lit
+          </a>
+          <br />
           <a
             href="https://www.symposiamagazine.com/issue02/zephyr-zhang"
             target="_blank" // Open link in a new tab
@@ -51,7 +59,7 @@ export const Read = () => {
           </a>
           <br />
           <a
-            href="https://thespinoff.co.nz/books/08-03-2024/the-friday-poem-you-ask-me-if-i-still-love-you-by-zephyr-zhang"
+            href="https://thespinoff.co.nz/authors/zephyr-zhang"
             target="_blank" // Open link in a new tab
             rel="noopener noreferrer" // Security measure
           >
