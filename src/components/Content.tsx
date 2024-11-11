@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { FaCamera } from "react-icons/fa";
 import { About } from "./About";
-import { Read } from "./Read";
+import { Read } from "./Read/Read";
 import { Events } from "./Events";
 import { Contact } from "./Contact";
 import { useEffect, useState } from "react";

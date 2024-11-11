@@ -1,20 +1,35 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, textDecoration } from "@chakra-ui/react";
 import { accordionTheme } from "./themes/accordionTheme";
 import { stepperTheme } from "./themes/stepperTheme";
 
-// example theme
 const theme = extendTheme({
   components: {
     Accordion: accordionTheme,
     Stepper: stepperTheme,
+    Link: {
+      baseStyle: (props: { colorMode: string; }) => ({
+        target: "_blank", // Open all links in a new tab
+        rel: "noopener noreferrer", // Ensure security when opening new tabs
+        color: "#F56565", // Same color as the global `a` styles
+        textDecoration: "none", // Removes underline
+        _hover: {
+          color: props.colorMode === "dark" ? "gray.200" : "gray.800", // Revert to default text color on hover
+          textDecoration: "none"
+        },
+      }),
+    },
   },
   styles: {
-    global: (props: any) => ({
+    global: (props: { colorMode: string; }) => ({
       a: {
+        target: "_blank", // Open all links in a new tab
+        rel: "noopener noreferrer", // Ensure security when opening new tabs
         color: "#F56565", // All links will be this color
         textDecoration: "none", // Optional: removes underline from links
         _hover: {
           color: props.colorMode === "dark" ? "gray.200" : "gray.800", // Revert to default text color on hover
+          textDecoration: "none"
+
         },
       },
     }),
@@ -25,23 +40,13 @@ const theme = extendTheme({
     white: "#fff",
     gray: {
       50: "#f7fafc",
-      // ...
       900: "#171923",
     },
     zRed: {
-      50: "#ffe5e5", // Lighter shade
-      100: "#fbbcbc", // Lighter shade
-      200: "#f29292", // Lighter shade
-      300: "#ea6969", // Light shade
-      400: "#e14040", // Slightly lighter than the main color
-      500: "#F56565", // Main color
-      600: "#cc4b4b", // Slightly darker than the main color
-      700: "#b33333", // Darker shade
-      800: "#992424", // Darker shade
-      900: "#7d1414", // Darkest shade
+      50: "#ffe5e5",
+      500: "#F56565",
+      900: "#7d1414",
     },
-
-    // ...
   },
   fonts: {
     body: "system-ui, sans-serif",
