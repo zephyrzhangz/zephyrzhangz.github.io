@@ -31,11 +31,11 @@ export const Read = () => {
       name: "Sweet Mammalian",
       entries: [
         {
-          title: "Issue 11: Be gay, do crime",
+          title: "Be gay, do crime",
           url: "https://sweetmammalian.squarespace.com/issue-eleven/zephyrzhang",
         },
         {
-          title: "Issue 9: sick leave",
+          title: "sick leave",
           url: "https://www.sweetmammalian.com/issue-nine/zephyr-zhang",
         },
       ],
@@ -45,11 +45,11 @@ export const Read = () => {
       name: "The Spinoff",
       entries: [
         {
-          title: "Oct 2024: the dancer",
+          title: "the dancer",
           url: "https://thespinoff.co.nz/books/11-10-2024/the-friday-poem-the-dancer-by-zephyr-zhang",
         },
         {
-          title: "Mar 2024: you ask me if I still love you",
+          title: "you ask me if I still love you",
           url: "https://thespinoff.co.nz/books/08-03-2024/the-friday-poem-you-ask-me-if-i-still-love-you-by-zephyr-zhang",
         },
       ],
@@ -71,6 +71,12 @@ export const Read = () => {
       entryType: "single",
       name: "Symposia",
       url: "https://www.symposiamagazine.com/issue02/zephyr-zhang",
+      type: "online",
+    },
+    {
+      entryType: "single",
+      name: "Starling",
+      url: "https://www.starlingmag.com/issue-14/zephyr-zhang",
       type: "online",
     },
     {

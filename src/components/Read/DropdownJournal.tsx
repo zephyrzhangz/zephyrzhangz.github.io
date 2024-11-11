@@ -35,7 +35,7 @@ export const DropdownJournal = ({ name, entries }: DropdownJournalProps) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                – {entry.title}
+                ◦ {entry.title}
               </Link>
             </Box>
           ))}
