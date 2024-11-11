@@ -34,6 +34,11 @@ export const DropdownJournal = ({ name, entries }: DropdownJournalProps) => {
                 href={entry.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                color={colorMode === "dark" ? "gray.200" : "gray.800"}
+                _hover={{
+                  color: linkColor , // Match hover behavior
+                  textDecoration: "none",
+                }}
               >
                 – {entry.title}
               </Link>
