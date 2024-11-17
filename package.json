@@ -30,7 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "git remote set-url origin git@github.com:zephyrzhangz/zephyrzhangz.github.io.git && gh-pages -d build",
+    "deploy": "git remote set-url origin git@github-zephyrzhangz:zephyrzhangz/zephyrzhangz.github.io.git && gh-pages -d build",
     "serve-build": "npm run build && npm install -g serve && serve -s build"
   },
   "eslintConfig": {
