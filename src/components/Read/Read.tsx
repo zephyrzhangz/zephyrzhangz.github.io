@@ -32,7 +32,7 @@ export const Read = () => {
       entries: [
         {
           title: "Be gay, do crime",
-          url: "https://sweetmammalian.squarespace.com/issue-eleven/zephyrzhang",
+          url: "https://www.sweetmammalian.com/issue-eleven/zephyrzhang",
         },
         {
           title: "sick leave",
