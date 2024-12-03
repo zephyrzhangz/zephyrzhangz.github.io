@@ -99,6 +99,14 @@ export const Events = () => {
         >
           Verb LitCrawl: Sweet Mammalian
         </a>
+        <br></br>7 Dec -{" "}
+        <a
+          href="https://theopenbook.co.nz/events/2024-the-open-book-christmas-party-zal9c"
+          target="_blank" // Open link in a new tab
+          rel="noopener noreferrer" // Security measure
+        >
+          Open Book Christmas Party
+        </a>
       </AccordionPanel>
     </AccordionItem>
   );

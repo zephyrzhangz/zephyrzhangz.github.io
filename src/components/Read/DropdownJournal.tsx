@@ -18,6 +18,7 @@ export const DropdownJournal = ({ name, entries }: DropdownJournalProps) => {
         onClick={onToggle}
         textAlign="left"
         fontWeight="normal"
+        fontSize="inherit"
         color={isOpen ? (colorMode === "dark" ? "gray.200" : "gray.800") : linkColor}
         _hover={{
           color: colorMode === "dark" ? "gray.200" : "gray.800", // Match hover behavior
