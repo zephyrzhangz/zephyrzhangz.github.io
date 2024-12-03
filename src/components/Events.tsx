@@ -1,11 +1,9 @@
 import {
-  Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  Collapse,
-  useDisclosure,
+  Text,
 } from "@chakra-ui/react";
 
 import { Box } from "@chakra-ui/react";
@@ -23,8 +21,9 @@ export const Events = () => {
         </AccordionButton>
       </h2>
       <AccordionPanel pb={4}>
-        <b>2024</b>
-        <br />
+        <Text fontWeight="bold" mb={1}>
+          2024
+        </Text>
         14 Feb -{" "}
         <a
           href="https://aucklandpride.org.nz/shows/ssbd-poetry-speakeasy/"
