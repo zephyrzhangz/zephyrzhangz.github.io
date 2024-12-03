@@ -2,16 +2,8 @@ import React from "react";
 import {
   AccordionItem,
   Box,
-  Stack,
-  Text,
-  Image,
-  Flex,
   useColorModeValue,
-  Button,
-  useDisclosure,
-  Fade,
   AccordionButton,
-  AccordionIcon,
   AccordionPanel,
 } from "@chakra-ui/react";
 import { FaCamera } from "react-icons/fa";
