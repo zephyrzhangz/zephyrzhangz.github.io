@@ -92,7 +92,7 @@ export const Read = () => {
       name: "Cordite",
       url: "http://cordite.org.au/poetry/treat/cucumis-sativus-parvus/",
       type: "online",
-      date: "2024-07-06",
+      date: "2024-07-05",
     },
     {
       entryType: "single",
