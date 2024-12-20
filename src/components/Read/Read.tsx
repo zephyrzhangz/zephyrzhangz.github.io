@@ -192,11 +192,11 @@ export const Read = () => {
         <AccordionPanel pb={4} mb={-3}>
           <Text
             display={{ base: "block", md: "none" }} // Show only in mobile (base to md)
-            mt={-3}
+            mt={-1.5}
             mb={3}
             fontSize={"small"}
           >
-            Use desktop mode for correct line breaks.
+            Use desktop mode for proper formatting.
           </Text>
           {groupAndSortJournals(journals).map(({ year, entries }) => (
             <Box key={year} mb={4}>
