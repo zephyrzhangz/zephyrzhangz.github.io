@@ -42,7 +42,7 @@ export const Read = () => {
       entryType: "single",
       name: "takahē",
       url: " https://www.takahe.org.nz/silly-goose/",
-      type: "print",
+      type: "online",
       date: "2024-12-08",
     },
     {
@@ -190,6 +190,14 @@ export const Read = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4} mb={-3}>
+          <Text
+            display={{ base: "block", md: "none" }} // Show only in mobile (base to md)
+            mt={-3}
+            mb={3}
+            fontSize={"small"}
+          >
+            Use desktop mode for correct line breaks.
+          </Text>
           {groupAndSortJournals(journals).map(({ year, entries }) => (
             <Box key={year} mb={4}>
               <Text fontWeight="bold" mb={1}>
