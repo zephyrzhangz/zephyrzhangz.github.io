@@ -1,4 +1,3 @@
-import React from "react";
 import {
   AccordionItem,
   Box,
@@ -6,7 +5,6 @@ import {
   AccordionButton,
   AccordionPanel,
 } from "@chakra-ui/react";
-import { FaCamera } from "react-icons/fa";
 
 export const About = () => {
   const textColor = useColorModeValue("black", "white");

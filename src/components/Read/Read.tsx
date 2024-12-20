@@ -33,28 +33,28 @@ export const Read = () => {
   const journals: JournalEntry[] = [
     {
       entryType: "single",
-      name: "Sweet Mammalian",
+      name: "Sweet Mammalian - Be gay, do crime",
       url: "https://www.sweetmammalian.com/issue-eleven/zephyrzhang",
       type: "online",
       date: "2024-11-09",
     },
     {
       entryType: "single",
-      name: "Frontier Poetry",
+      name: "Frontier Poetry - Object Permanence",
       url: "https://www.frontierpoetry.com/2024/10/25/zephyr-zhang/",
       type: "online",
       date: "2024-10-25",
     },
     {
       entryType: "single",
-      name: "Cartridge Lit",
+      name: "Cartridge Lit - why are you playing animal crossing instead of talking to me",
       url: "https://cartridgelit.com/2024/10/23/animal-crossing/",
       type: "online",
       date: "2024-10-23",
     },
     {
       entryType: "single",
-      name: "The Spinoff (11/10)",
+      name: "The Spinoff (11/10) - the dancer",
       url: "https://thespinoff.co.nz/books/11-10-2024/the-friday-poem-the-dancer-by-zephyr-zhang",
       type: "online",
       date: "2024-10-11",
