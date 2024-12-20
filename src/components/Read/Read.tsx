@@ -33,6 +33,20 @@ export const Read = () => {
   const journals: JournalEntry[] = [
     {
       entryType: "single",
+      name: "Turbine | Kapohau",
+      url: "https://turbinekapohau.org.nz/2024-contents-poetry-zephyr-zhang/",
+      type: "online",
+      date: "2024-12-11",
+    },
+    {
+      entryType: "single",
+      name: "takahē",
+      url: " https://www.takahe.org.nz/silly-goose/",
+      type: "print",
+      date: "2024-12-08",
+    },
+    {
+      entryType: "single",
       name: "Sweet Mammalian",
       url: "https://www.sweetmammalian.com/issue-eleven/zephyrzhang",
       type: "online",
