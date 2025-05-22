@@ -57,7 +57,7 @@ export const Contact = () => {
   return (
     <AccordionItem borderColor={accentColor}>
       <h2>
-        <AccordionButton borderColor={accentColor} >
+        <AccordionButton borderColor={accentColor}>
           <Box flex="1" textAlign="left">
             <b>Contact</b>
           </Box>
@@ -107,12 +107,6 @@ export const Contact = () => {
                 href={"https://twitter.com/zephyrzhangz"}
               >
                 <FaTwitter />
-              </SocialButton>
-              <SocialButton
-                label={"GitHub"}
-                href={"https://github.com/zephyrzhangz/"}
-              >
-                <FaGithub />
               </SocialButton>
             </Stack>
           </Stack>

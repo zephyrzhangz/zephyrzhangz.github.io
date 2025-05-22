@@ -33,6 +33,13 @@ export const Read = () => {
   const journals: JournalEntry[] = [
     {
       entryType: "single",
+      name: "Ōrongohau | Best New Zealand Poems",
+      url: "https://www.bestnewzealandpoems.org.nz/2024-contents/zephyr-zhang/",
+      type: "online",
+      date: "2025-31-3",
+    },
+    {
+      entryType: "single",
       name: "Turbine | Kapohau",
       url: "https://turbinekapohau.org.nz/2024-contents-poetry-zephyr-zhang/",
       type: "online",
