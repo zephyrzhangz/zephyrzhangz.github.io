@@ -22,89 +22,57 @@ export const Events = () => {
       </h2>
       <AccordionPanel pb={4}>
         <Text fontWeight="bold" mb={1}>
-          2024
+          2025
         </Text>
-        14 Feb -{" "}
+        20 Feb -{" "}
         <a
-          href="https://aucklandpride.org.nz/shows/ssbd-poetry-speakeasy/"
+          href="https://events.humanitix.com/yellow-lamp-vol-pride"
           target="_blank" // Open link in a new tab
           rel="noopener noreferrer" // Security measure
         >
-          SSBD: Poetry Speakeasy
+          Yellow Lamp Vol. Pride
         </a>{" "}
         <br></br>
-        15 Feb -{" "}
+        12 Apr -{" "}
         <a
-          href="https://basementtheatre.co.nz/whats-on/bad-apple-presents-the-showcase"
+          href="https://www.otago.ac.nz/news/events/auckland-book-launch-mad-diva-by-cadence-chung"
           target="_blank" // Open link in a new tab
           rel="noopener noreferrer" // Security measure
         >
-          bad apple Showcase
+          Cadence Chung - Mad Diva Launch
         </a>
         <br></br>
-        17 Feb -{" "}
+        11 Jul -{" "}
         <a
-          href="https://aucklandpride.org.nz/shows/ssbd-rage-on-the-page/"
+          href="https://aucklanduniversitypress.co.nz/news/book-launch-dear-alter/"
           target="_blank" // Open link in a new tab
           rel="noopener noreferrer" // Security measure
         >
-          SSBD: Rage on the Page
+          Jiaqiao Liu - Dear Alter Launch
         </a>
-        <br></br>5 May -{" "}
+        <br></br>14 Aug -{" "}
         <a
-          href="https://www.aucklandartgallery.com/whats-on/event/on-being-chinese-the-poetry"
+          href="https://aucklanduniversitypress.co.nz/news/book-launch-no-good/"
           target="_blank" // Open link in a new tab
           rel="noopener noreferrer" // Security measure
         >
-          Auckland Art Gallery: On Being Chinese
+          Sophie van Waardenberg - No Good Launch
         </a>
-        <br></br>4 Jul -{" "}
+        <br></br>18 Aug -{" "}
         <a
-          href="https://www.instagram.com/p/C8lON0QPil3"
+          href="https://www.tepapa.govt.nz/visit/events/writers-on-mondays-orongohau-best-new-zealand-poems-2024"
           target="_blank" // Open link in a new tab
           rel="noopener noreferrer" // Security measure
         >
-          Rat World 7 Launch Party
+          Writers on Mondays – Ōrongohau: BNZP 2024
         </a>
-        <br></br>15 Aug -{" "}
+        <br></br>29 Aug -{" "}
         <a
-          href="https://www.instagram.com/p/C-eXiRszBfF/"
+          href="https://www.instagram.com/yellowlamppoetry/"
           target="_blank" // Open link in a new tab
           rel="noopener noreferrer" // Security measure
         >
-          Yellow Lamp Poetry
-        </a>
-        <br></br>23 Aug -{" "}
-        <a
-          href="https://www.timeout.co.nz/upcoming-events/atp2024"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          All Tomorrow's Poets
-        </a>
-        <br></br>1 Sep -{" "}
-        <a
-          href="https://theopenbook.co.nz/events/2024/9/1/starling-issue-18-auckland-launch-party"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          Starling Issue 18 Launch
-        </a>
-        <br></br>9 Nov -{" "}
-        <a
-          href="https://www.verbwellington.nz/litcrawl-2024-events/sweet-mammalian"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          Verb LitCrawl: Sweet Mammalian
-        </a>
-        <br></br>7 Dec -{" "}
-        <a
-          href="https://theopenbook.co.nz/events/2024-the-open-book-christmas-party-zal9c"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          Open Book Christmas Party
+          Yellow Lamp Poetry Vol. Library
         </a>
       </AccordionPanel>
     </AccordionItem>

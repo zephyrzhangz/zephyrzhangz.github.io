@@ -51,9 +51,7 @@ export const About = () => {
         </i>{" "}
         and <i>OTHER [chinese]</i>. Their poetry is published in places like{" "}
         <i>Cordite</i>, <i>Landfall</i>, <i>Starling</i>, <i>Symposia</i>, and{" "}
-        <i>
-          Rapture: An Anthology of Performance Poetry from Aotearoa New Zealand
-        </i>
+        <i>Ōrongohau | Best New Zealand Poems</i>
         .
         <CustomSpacer height="30px" />
       </AccordionPanel>
