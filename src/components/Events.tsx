@@ -66,13 +66,21 @@ export const Events = () => {
         >
           Writers on Mondays – Ōrongohau: BNZP 2024
         </a>
+        <br></br>22 Aug -{" "}
+        <a
+          href="https://www.facebook.com/events/1434554414522783/"
+          target="_blank" // Open link in a new tab
+          rel="noopener noreferrer" // Security measure
+        >
+          Poetry Aotearoa Yearbook 2025 Launch
+        </a>
         <br></br>29 Aug -{" "}
         <a
           href="https://www.instagram.com/yellowlamppoetry/"
           target="_blank" // Open link in a new tab
           rel="noopener noreferrer" // Security measure
         >
-          Yellow Lamp Vol. Library
+          Winter Poetry Festival
         </a>
       </AccordionPanel>
     </AccordionItem>
