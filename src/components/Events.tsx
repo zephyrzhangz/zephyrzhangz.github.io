@@ -72,7 +72,7 @@ export const Events = () => {
           target="_blank" // Open link in a new tab
           rel="noopener noreferrer" // Security measure
         >
-          Yellow Lamp Poetry Vol. Library
+          Yellow Lamp Vol. Library
         </a>
       </AccordionPanel>
     </AccordionItem>
