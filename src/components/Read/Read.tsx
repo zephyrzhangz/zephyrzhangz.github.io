@@ -40,6 +40,13 @@ export const Read = () => {
     },
     {
       entryType: "single",
+      name: "Poetry Aotearoa Yearbook",
+      url: "https://www.masseypress.ac.nz/books/poetry-aotearoa-yearbook-2025",
+      type: "print",
+      date: "2025-14-8",
+    },
+    {
+      entryType: "single",
       name: "Turbine | Kapohau",
       url: "https://turbinekapohau.org.nz/2024-contents-poetry-zephyr-zhang/",
       type: "online",

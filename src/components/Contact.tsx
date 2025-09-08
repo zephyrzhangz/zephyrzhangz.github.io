@@ -70,7 +70,7 @@ export const Contact = () => {
           direction={{ base: "column", sm: "row" }}
         >
           <Stack direction={"column"} spacing={6}>
-            <Stack direction={"row"} spacing={3}>
+            <Stack direction={"row"} spacing={2}>
               <Button
                 rounded={"md"}
                 size={"sd"}
@@ -101,12 +101,6 @@ export const Contact = () => {
                 href={"https://instagram.com/klaxoon"}
               >
                 <FaInstagram />
-              </SocialButton>
-              <SocialButton
-                label={"Twitter"}
-                href={"https://twitter.com/zephyrzhangz"}
-              >
-                <FaTwitter />
               </SocialButton>
             </Stack>
           </Stack>
