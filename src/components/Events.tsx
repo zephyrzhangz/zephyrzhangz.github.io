@@ -82,6 +82,14 @@ export const Events = () => {
         >
           Winter Poetry Festival
         </a>
+        <br></br>21 Sep -{" "}
+        <a
+          href="https://theopenbook.co.nz/events/2025/9/3/starling-twenty-launch"
+          target="_blank" // Open link in a new tab
+          rel="noopener noreferrer" // Security measure
+        >
+          Starling 20 Launch
+        </a>
       </AccordionPanel>
     </AccordionItem>
   );
