@@ -1,20 +1,16 @@
-import { extendTheme, textDecoration } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 import { accordionTheme } from "./themes/accordionTheme";
-import { stepperTheme } from "./themes/stepperTheme";
 
 const theme = extendTheme({
   components: {
     Accordion: accordionTheme,
-    Stepper: stepperTheme,
     Link: {
       baseStyle: (props: { colorMode: string; }) => ({
-        target: "_blank", // Open all links in a new tab
-        rel: "noopener noreferrer", // Ensure security when opening new tabs
-        color: "#F56565", // Same color as the global `a` styles
-        textDecoration: "none", // Removes underline
+        color: "#F56565",
+        textDecoration: "none",
         _hover: {
-          color: props.colorMode === "dark" ? "gray.200" : "gray.800", // Revert to default text color on hover
-          textDecoration: "none"
+          color: props.colorMode === "dark" ? "gray.200" : "gray.800",
+          textDecoration: "none",
         },
       }),
     },
@@ -22,14 +18,11 @@ const theme = extendTheme({
   styles: {
     global: (props: { colorMode: string; }) => ({
       a: {
-        target: "_blank", // Open all links in a new tab
-        rel: "noopener noreferrer", // Ensure security when opening new tabs
-        color: "#F56565", // All links will be this color
-        textDecoration: "none", // Optional: removes underline from links
+        color: "#F56565",
+        textDecoration: "none",
         _hover: {
-          color: props.colorMode === "dark" ? "gray.200" : "gray.800", // Revert to default text color on hover
-          textDecoration: "none"
-
+          color: props.colorMode === "dark" ? "gray.200" : "gray.800",
+          textDecoration: "none",
         },
       },
     }),

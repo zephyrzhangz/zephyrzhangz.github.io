@@ -13,7 +13,7 @@ import {
   chakra,
   VisuallyHidden,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { ReactNode } from "react";
 
 const SocialButton = ({

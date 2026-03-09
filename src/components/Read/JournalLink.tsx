@@ -1,21 +1,18 @@
-import { Box, Link } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { ExternalLink } from "../ExternalLink";
 
 interface JournalLinkProps {
   name: string;
   url: string;
-  type: "online" | "print"; // Online or print link
+  type: "online" | "print";
 }
 
 export const JournalLink = ({ name, url, type }: JournalLinkProps) => {
   return (
     <Box>
-      <Link
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <ExternalLink href={url}>
         {type === "online" ? "↳" : "▤"} {name}
-      </Link>
+      </ExternalLink>
     </Box>
   );
 };

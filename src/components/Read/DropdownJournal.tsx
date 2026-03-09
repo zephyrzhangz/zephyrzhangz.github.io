@@ -1,4 +1,5 @@
-import { Box, Button, Collapse, Link, useDisclosure, useColorMode } from "@chakra-ui/react";
+import { Box, Button, Collapse, useDisclosure, useColorMode } from "@chakra-ui/react";
+import { ExternalLink } from "../ExternalLink";
 
 interface DropdownJournalProps {
   name: string;
@@ -8,11 +9,10 @@ interface DropdownJournalProps {
 export const DropdownJournal = ({ name, entries }: DropdownJournalProps) => {
   const linkColor = "#F56565";
   const { isOpen, onToggle } = useDisclosure();
-  const { colorMode } = useColorMode(); // Access current color mode
-
+  const { colorMode } = useColorMode();
 
   return (
-    <Box> 
+    <Box>
       <Button
         variant="link"
         onClick={onToggle}
@@ -21,7 +21,7 @@ export const DropdownJournal = ({ name, entries }: DropdownJournalProps) => {
         fontSize="inherit"
         color={isOpen ? (colorMode === "dark" ? "gray.200" : "gray.800") : linkColor}
         _hover={{
-          color: colorMode === "dark" ? "gray.200" : "gray.800", // Match hover behavior
+          color: colorMode === "dark" ? "gray.200" : "gray.800",
           textDecoration: "none",
         }}
       >
@@ -31,13 +31,9 @@ export const DropdownJournal = ({ name, entries }: DropdownJournalProps) => {
         <Box pl={4} mt={2} mb={isOpen ? 4 : 0}>
           {entries.map((entry, index) => (
             <Box key={index}>
-              <Link
-                href={entry.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <ExternalLink href={entry.url}>
                 ◦ {entry.title}
-              </Link>
+              </ExternalLink>
             </Box>
           ))}
         </Box>

@@ -6,7 +6,7 @@ import {
   AccordionButton,
   AccordionPanel,
 } from "@chakra-ui/react";
-import { FaCamera } from "react-icons/fa";
+import { ExternalLink } from "./ExternalLink";
 
 export const About = () => {
   const textColor = useColorModeValue("black", "white");
@@ -31,23 +31,15 @@ export const About = () => {
         <CustomSpacer height="12px" />
         Zephyr has performed in the Auckland Theatre Company iteration of{" "}
         <i>
-          <a
-            href="https://www.atc.co.nz/whats-on/past-seasons/past-2022-season/scenes-from-a-yellow-peril"
-            target="_blank" // Open link in a new tab
-            rel="noopener noreferrer" // Security measure
-          >
+          <ExternalLink href="https://www.atc.co.nz/whats-on/past-seasons/past-2022-season/scenes-from-a-yellow-peril">
             Scenes from a Yellow Peril
-          </a>
+          </ExternalLink>
         </i>
         ,{" "}
         <i>
-          <a
-            href="https://nathanjoe.com/i-am-rachel-chu"
-            target="_blank" // Open link in a new tab
-            rel="noopener noreferrer" // Security measure
-          >
+          <ExternalLink href="https://nathanjoe.com/i-am-rachel-chu">
             I Am Rachel Chu
-          </a>
+          </ExternalLink>
         </i>{" "}
         and <i>OTHER [chinese]</i>. Their poetry is published in places like{" "}
         <i>Cordite</i>, <i>Landfall</i>, <i>Starling</i>, <i>Symposia</i>, and{" "}

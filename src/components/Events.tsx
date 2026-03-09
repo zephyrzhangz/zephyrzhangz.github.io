@@ -7,6 +7,19 @@ import {
 } from "@chakra-ui/react";
 
 import { Box } from "@chakra-ui/react";
+import { ExternalLink } from "./ExternalLink";
+
+const events = [
+  { date: "20 Feb", label: "Yellow Lamp Vol. Pride", url: "https://events.humanitix.com/yellow-lamp-vol-pride" },
+  { date: "12 Apr", label: "Cadence Chung - Mad Diva Launch", url: "https://www.otago.ac.nz/news/events/auckland-book-launch-mad-diva-by-cadence-chung" },
+  { date: "11 Jul", label: "Jiaqiao Liu - Dear Alter Launch", url: "https://aucklanduniversitypress.co.nz/news/book-launch-dear-alter/" },
+  { date: "14 Aug", label: "Sophie van Waardenberg - No Good Launch", url: "https://aucklanduniversitypress.co.nz/news/book-launch-no-good/" },
+  { date: "18 Aug", label: "Writers on Mondays – Ōrongohau: BNZP 2024", url: "https://www.tepapa.govt.nz/visit/events/writers-on-mondays-orongohau-best-new-zealand-poems-2024" },
+  { date: "22 Aug", label: "Poetry Aotearoa Yearbook 2025 Launch", url: "https://www.facebook.com/events/1434554414522783/" },
+  { date: "29 Aug", label: "Winter Poetry Festival", url: "https://www.instagram.com/yellowlamppoetry/" },
+  { date: "21 Sep", label: "Starling 20 Launch", url: "https://theopenbook.co.nz/events/2025/9/3/starling-twenty-launch" },
+  { date: "10 Dec", label: "I'll Be Homo For Christmas", url: "https://www.iticket.co.nz/events/2025/dec/ill-be-homo-by-christmas-a-evening-of-queer-poetry" },
+];
 
 export const Events = () => {
   const accentColor = "#F56565";
@@ -24,80 +37,12 @@ export const Events = () => {
         <Text fontWeight="bold" mb={1}>
           2025
         </Text>
-        20 Feb -{" "}
-        <a
-          href="https://events.humanitix.com/yellow-lamp-vol-pride"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          Yellow Lamp Vol. Pride
-        </a>{" "}
-        <br></br>
-        12 Apr -{" "}
-        <a
-          href="https://www.otago.ac.nz/news/events/auckland-book-launch-mad-diva-by-cadence-chung"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          Cadence Chung - Mad Diva Launch
-        </a>
-        <br></br>
-        11 Jul -{" "}
-        <a
-          href="https://aucklanduniversitypress.co.nz/news/book-launch-dear-alter/"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          Jiaqiao Liu - Dear Alter Launch
-        </a>
-        <br></br>14 Aug -{" "}
-        <a
-          href="https://aucklanduniversitypress.co.nz/news/book-launch-no-good/"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          Sophie van Waardenberg - No Good Launch
-        </a>
-        <br></br>18 Aug -{" "}
-        <a
-          href="https://www.tepapa.govt.nz/visit/events/writers-on-mondays-orongohau-best-new-zealand-poems-2024"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          Writers on Mondays – Ōrongohau: BNZP 2024
-        </a>
-        <br></br>22 Aug -{" "}
-        <a
-          href="https://www.facebook.com/events/1434554414522783/"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          Poetry Aotearoa Yearbook 2025 Launch
-        </a>
-        <br></br>29 Aug -{" "}
-        <a
-          href="https://www.instagram.com/yellowlamppoetry/"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          Winter Poetry Festival
-        </a>
-        <br></br>21 Sep -{" "}
-        <a
-          href="https://theopenbook.co.nz/events/2025/9/3/starling-twenty-launch"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          Starling 20 Launch
-        </a>
-        <br></br>10 Dec -{" "}
-        <a
-          href="https://www.iticket.co.nz/events/2025/dec/ill-be-homo-by-christmas-a-evening-of-queer-poetry"
-          target="_blank" // Open link in a new tab
-          rel="noopener noreferrer" // Security measure
-        >
-          I'll Be Homo For Christmas
-        </a>
+        {events.map((event, i) => (
+          <span key={i}>
+            {event.date} - <ExternalLink href={event.url}>{event.label}</ExternalLink>
+            {i < events.length - 1 && <br />}
+          </span>
+        ))}
       </AccordionPanel>
     </AccordionItem>
   );
