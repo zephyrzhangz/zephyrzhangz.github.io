@@ -48,7 +48,7 @@ export const Read = () => {
     {
       entryType: "single",
       name: "Turbine | Kapohau",
-      url: "https://turbinekapohau.org.nz/2024-contents-poetry-zephyr-zhang/",
+      url: "https://turbinekapohau.org.nz/archive-issues/2024-contents/poetry-zephyr-zhang/",
       type: "online",
       date: "2024-12-11",
     },
@@ -179,7 +179,7 @@ export const Read = () => {
     });
 
     const sortedYears = Object.keys(grouped).sort(
-      (a, b) => Number(b) - Number(a)
+      (a, b) => Number(b) - Number(a),
     );
 
     return sortedYears.map((year) => ({
@@ -231,7 +231,7 @@ export const Read = () => {
                     url={journal.url}
                     type={journal.type}
                   />
-                )
+                ),
               )}
             </Box>
           ))}
