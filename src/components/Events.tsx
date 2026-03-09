@@ -90,7 +90,7 @@ export const Events = () => {
         >
           Starling 20 Launch
         </a>
-        <br></br>21 Sep -{" "}
+        <br></br>10 Dec -{" "}
         <a
           href="https://www.iticket.co.nz/events/2025/dec/ill-be-homo-by-christmas-a-evening-of-queer-poetry"
           target="_blank" // Open link in a new tab
