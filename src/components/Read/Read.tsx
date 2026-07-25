@@ -33,6 +33,13 @@ export const Read = () => {
   const journals: JournalEntry[] = [
     {
       entryType: "single",
+      name: "Going Down Swinging",
+      url: "https://goingdownswinging.org.au/archives/my-immortal-angst/",
+      type: "online",
+      date: "2025-25-8",
+    },
+    {
+      entryType: "single",
       name: "Ōrongohau | Best New Zealand Poems",
       url: "https://www.bestnewzealandpoems.org.nz/2024-contents/zephyr-zhang/",
       type: "online",
