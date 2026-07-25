@@ -8,8 +8,10 @@
 # testing
 /coverage
 
-# production
+# production (build output - deployed to the gh-pages branch, never committed to main)
 /build
+/static
+/asset-manifest.json
 
 # misc
 .DS_Store
