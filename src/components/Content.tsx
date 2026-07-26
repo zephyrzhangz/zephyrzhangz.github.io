@@ -8,9 +8,9 @@ import {
   Text,
   Image,
   useColorModeValue,
+  useToken,
   VisuallyHidden,
   Button,
-  Collapse,
   useDisclosure,
   Fade,
 } from "@chakra-ui/react";
@@ -22,23 +22,42 @@ import { Events } from "./Events";
 import { Contact } from "./Contact";
 import { useEffect, useState } from "react";
 
-const ImageWithCaption = () => {
+const ImageWithCaption = ({ showAupCover }: { showAupCover: boolean }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Box textAlign="left" position="relative" width="95%">
-      <Image
-        alt={"Zephyr Zhang"}
-        fit={"cover"}
-        align={"center"}
-        w="100%"
-        height="auto"
-        rounded={"md"}
-        src={"/Zephyr Zhang.jpg"}
-        loading="lazy"
-      />
+      <Box position="relative" width="100%">
+        <Image
+          alt={"Zephyr Zhang"}
+          fit={"cover"}
+          align={"center"}
+          w="100%"
+          height="auto"
+          rounded={"md"}
+          src={"/Zephyr Zhang.jpg"}
+          loading="lazy"
+          opacity={showAupCover ? 0 : 1}
+          transition="opacity 0.6s ease"
+        />
+        <Image
+          alt={"AUP New Poets 12"}
+          fit={"contain"}
+          position="absolute"
+          top={0}
+          left={0}
+          w="100%"
+          h="100%"
+          rounded={"md"}
+          src={"/AUP New Poets 12.jpg"}
+          loading="lazy"
+          opacity={showAupCover ? 1 : 0}
+          transition="opacity 0.6s ease"
+          pointerEvents={showAupCover ? "auto" : "none"}
+        />
+      </Box>
       <Flex justifyContent="space-between" alignItems="center" mt={0.2}>
-        <Fade in={isOpen}>
+        <Fade in={isOpen && !showAupCover}>
           <Text
             fontSize="xs"
             color={useColorModeValue("gray.600", "gray.400")}
@@ -48,15 +67,17 @@ const ImageWithCaption = () => {
             Photography by Todd Karehana & Julie Zhu
           </Text>
         </Fade>
-        <Button
-          onClick={onToggle}
-          variant="unstyled"
-          p={0}
-          minWidth="auto"
-          size="sm"
-        >
-          <FaCamera size={12} />
-        </Button>
+        {!showAupCover && (
+          <Button
+            onClick={onToggle}
+            variant="unstyled"
+            p={0}
+            minWidth="auto"
+            size="sm"
+          >
+            <FaCamera size={12} />
+          </Button>
+        )}
       </Flex>
     </Box>
   );
@@ -77,6 +98,17 @@ export default function Content() {
 
   const textColor = useColorModeValue("black", "white");
 
+  const [accentBase, accentAupUi, accentAupHighlight] = useToken("colors", [
+    "accent.base",
+    "accent.aupUi",
+    "accent.aupHighlight",
+  ]);
+
+  const AUP_NEW_POETS_INDEX = 1;
+  const showAupCover = Array.isArray(expandedIndex)
+    ? expandedIndex.includes(AUP_NEW_POETS_INDEX)
+    : expandedIndex === AUP_NEW_POETS_INDEX;
+
   return (
     <Flex
       direction="column"
@@ -84,6 +116,11 @@ export default function Content() {
       justify="center"
       minHeight="100vh" // Ensure that the content is centered vertically across the entire viewport height
       padding="10px" // Add padding to prevent content from touching the edges
+      sx={{
+        "--accent": showAupCover ? accentAupUi : accentBase,
+        "--accent-highlight": showAupCover ? accentAupHighlight : accentBase,
+        transition: "--accent 0.4s ease, --accent-highlight 0.4s ease",
+      }}
     >
       <Container maxW={"7xl"}>
         <Flex
@@ -106,7 +143,7 @@ export default function Content() {
             mb={{ base: 2, md: 10 }} // Adjust margin for spacing between photo and text
             mr={{ md: 10 }}
           >
-            <ImageWithCaption />
+            <ImageWithCaption showAupCover={showAupCover} />
           </Box>
           <Stack
             flex={1}
@@ -136,7 +173,7 @@ export default function Content() {
                   position: "absolute",
                   bottom: 1,
                   left: 0,
-                  bg: "red.400",
+                  bg: "var(--accent-highlight)",
                   zIndex: -1,
                 }}
               >

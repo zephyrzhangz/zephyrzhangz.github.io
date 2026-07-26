@@ -1,3 +1,15 @@
+@property --accent {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #f56565;
+}
+
+@property --accent-highlight {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #f56565;
+}
+
 .container {
   max-width: 7xl;
   padding: 3rem 1rem;

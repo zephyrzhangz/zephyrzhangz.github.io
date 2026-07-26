@@ -7,7 +7,7 @@ const { definePartsStyle, defineMultiStyleConfig } =
 const baseStyle = definePartsStyle({
   // define the part you're going to style
   button: {
-    _hover: { color: "#F56565" },
+    _hover: { color: "var(--accent)" },
     // change the backgroundColor of the container
   },
 });

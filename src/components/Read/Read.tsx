@@ -11,7 +11,7 @@ import { JournalLink } from "./JournalLink";
 import { DropdownJournal } from "./DropdownJournal";
 
 export const Read = () => {
-  const accentColor = "#F56565";
+  const accentColor = "var(--accent)";
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const [fade, setFade] = useState({ top: false, bottom: false });

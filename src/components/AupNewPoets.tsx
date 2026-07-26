@@ -7,7 +7,7 @@ import {
 } from "@chakra-ui/react";
 
 export const AupNewPoets = () => {
-  const accentColor = "#F56565";
+  const accentColor = "var(--accent)";
   return (
     <AccordionItem borderColor={accentColor}>
       <h2>

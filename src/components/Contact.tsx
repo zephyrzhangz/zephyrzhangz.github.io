@@ -28,7 +28,7 @@ const SocialButton = ({
   return (
     <chakra.button
       bg="transparent" // Transparent background
-      border="1px solid #F56565" // Red border
+      border="1px solid var(--accent)" // Red border
       rounded={"full"}
       w={8}
       h={8}
@@ -53,7 +53,7 @@ const SocialButton = ({
 };
 
 export const Contact = () => {
-  const accentColor = "#F56565";
+  const accentColor = "var(--accent)";
   return (
     <AccordionItem borderColor={accentColor}>
       <h2>
@@ -75,11 +75,11 @@ export const Contact = () => {
                 rounded={"md"}
                 size={"sd"}
                 fontWeight={"normal"}
-                color={"#F56565"}
+                color={"var(--accent)"}
                 px={5}
                 width="fit-content"
                 bg="transparent" // Transparent background
-                border="1px solid #F56565" // Red border
+                border="1px solid var(--accent)" // Red border
                 cursor={"pointer"}
                 as={"a"}
                 href="mailto:zephyrzhangz@gmail.com"

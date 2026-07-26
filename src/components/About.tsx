@@ -23,7 +23,7 @@ export const About = ({
     <AccordionItem borderTopWidth={0} p={0}>
       <h2>
         <AccordionButton
-          borderColor="#F56565"
+          borderColor="var(--accent)"
           p={0}
           textColor={textColor}
           _hover={{ bg: "transparent" }}

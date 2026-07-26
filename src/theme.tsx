@@ -6,7 +6,7 @@ const theme = extendTheme({
     Accordion: accordionTheme,
     Link: {
       baseStyle: (props: { colorMode: string; }) => ({
-        color: "#F56565",
+        color: "var(--accent)",
         textDecoration: "none",
         _hover: {
           color: props.colorMode === "dark" ? "gray.200" : "gray.800",
@@ -18,7 +18,7 @@ const theme = extendTheme({
   styles: {
     global: (props: { colorMode: string; }) => ({
       a: {
-        color: "#F56565",
+        color: "var(--accent)",
         textDecoration: "none",
         _hover: {
           color: props.colorMode === "dark" ? "gray.200" : "gray.800",
@@ -35,10 +35,10 @@ const theme = extendTheme({
       50: "#f7fafc",
       900: "#171923",
     },
-    zRed: {
-      50: "#ffe5e5",
-      500: "#F56565",
-      900: "#7d1414",
+    accent: {
+      base: "#F56565",
+      aupUi: "#5E8076",
+      aupHighlight: "#D0DD29",
     },
   },
   fonts: {
