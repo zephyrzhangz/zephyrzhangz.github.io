@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { FaCamera } from "react-icons/fa";
 import { About } from "./About";
+import { AupNewPoets } from "./AupNewPoets";
 import { Read } from "./Read/Read";
 import { Events } from "./Events";
 import { Contact } from "./Contact";
@@ -87,7 +88,7 @@ export default function Content() {
       <Container maxW={"7xl"}>
         <Flex
           direction={{ base: "column", md: "row" }}
-          alignItems={{ base: "center", md: "center" }} // Ensure vertical centering in all modes
+          alignItems={{ base: "center", md: "center" }} // Keep photo vertically centered against the text
           justify="center" // Ensure the content is centered horizontally
           width="100%" // Ensure Flex takes full width of the container
         >
@@ -99,7 +100,7 @@ export default function Content() {
             height={"full"}
             rounded={"md"}
             // width={{ base: "30%", sm: "50%", md: "40%", lg: "20%" }}
-            maxWidth={{ base: "100%", md: "30%" }} // Adjusting the width of the photo for different screen sizes
+            maxWidth={{ base: "100%", md: "32%" }} // Wider (so taller) portrait keeps the bio + accordions within its height
             width={{ base: "100%", md: "40%" }}
             overflow={"hidden"}
             mb={{ base: 2, md: 10 }} // Adjust margin for spacing between photo and text
@@ -109,7 +110,7 @@ export default function Content() {
           </Box>
           <Stack
             flex={1}
-            spacing={{ base: 5, md: 10 }}
+            spacing={{ base: 4, md: 5 }}
             minHeight={"3px"}
             justifyContent={"center"} // Center the stack content vertically
             maxWidth={{ base: "100%", md: "40%" }}
@@ -155,7 +156,8 @@ export default function Content() {
                   onChange={handleAccordionChange}
                   allowToggle
                 >
-                  <About />
+                  <About onOpenAupNewPoets={() => setExpandedIndex(1)} />
+                  <AupNewPoets />
                   <Read />
                   <Events />
                   <Contact />

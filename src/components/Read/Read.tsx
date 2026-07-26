@@ -6,11 +6,42 @@ import {
   Box,
   Text,
 } from "@chakra-ui/react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { JournalLink } from "./JournalLink";
 import { DropdownJournal } from "./DropdownJournal";
 
 export const Read = () => {
   const accentColor = "#F56565";
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [fade, setFade] = useState({ top: false, bottom: false });
+
+  const updateFade = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const top = el.scrollTop > 4;
+    const bottom = el.scrollTop + el.clientHeight < el.scrollHeight - 4;
+    setFade((prev) =>
+      prev.top === top && prev.bottom === bottom ? prev : { top, bottom },
+    );
+  }, []);
+
+  // Re-measure on mount and whenever the panel resizes (e.g. accordion opens).
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    updateFade();
+    const observer = new ResizeObserver(updateFade);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [updateFade]);
+
+  const maskImage = `linear-gradient(to bottom, ${[
+    fade.top ? "transparent" : "#000",
+    ...(fade.top ? ["#000 32px"] : []),
+    ...(fade.bottom ? ["#000 calc(100% - 32px)"] : []),
+    fade.bottom ? "transparent" : "#000",
+  ].join(", ")})`;
 
   type JournalEntry =
     | {
@@ -219,29 +250,41 @@ export const Read = () => {
           >
             Use desktop mode for proper formatting.
           </Text>
-          {groupAndSortJournals(journals).map(({ year, entries }) => (
-            <Box key={year} mb={4}>
-              <Text fontWeight="bold" mb={1}>
-                {year}
-              </Text>
-              {entries.map((journal, index) =>
-                journal.entryType === "dropdown" ? (
-                  <DropdownJournal
-                    key={index}
-                    name={journal.name}
-                    entries={journal.entries}
-                  />
-                ) : (
-                  <JournalLink
-                    key={index}
-                    name={journal.name}
-                    url={journal.url}
-                    type={journal.type}
-                  />
-                ),
-              )}
-            </Box>
-          ))}
+          <Box
+            ref={scrollRef}
+            onScroll={updateFade}
+            maxH="300px"
+            overflowY="auto"
+            pr={2} // room for the scrollbar so text isn't clipped
+            sx={{
+              maskImage,
+              WebkitMaskImage: maskImage,
+            }}
+          >
+            {groupAndSortJournals(journals).map(({ year, entries }) => (
+              <Box key={year} mb={4}>
+                <Text fontWeight="bold" mb={1}>
+                  {year}
+                </Text>
+                {entries.map((journal, index) =>
+                  journal.entryType === "dropdown" ? (
+                    <DropdownJournal
+                      key={index}
+                      name={journal.name}
+                      entries={journal.entries}
+                    />
+                  ) : (
+                    <JournalLink
+                      key={index}
+                      name={journal.name}
+                      url={journal.url}
+                      type={journal.type}
+                    />
+                  ),
+                )}
+              </Box>
+            ))}
+          </Box>
         </AccordionPanel>
       </AccordionItem>
     </Box>
