@@ -33,7 +33,7 @@ const events = [
 ];
 
 export const Events = () => {
-  const accentColor = "#F56565";
+  const accentColor = "var(--accent)";
   return (
     <AccordionItem borderColor={accentColor} borderTopWidth={0}>
       <h2>

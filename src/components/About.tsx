@@ -5,10 +5,15 @@ import {
   useColorModeValue,
   AccordionButton,
   AccordionPanel,
+  Link,
 } from "@chakra-ui/react";
 import { ExternalLink } from "./ExternalLink";
 
-export const About = () => {
+export const About = ({
+  onOpenAupNewPoets,
+}: {
+  onOpenAupNewPoets: () => void;
+}) => {
   const textColor = useColorModeValue("black", "white");
   const CustomSpacer = ({ height }: { height: string }) => (
     <Box height={height} />
@@ -18,7 +23,7 @@ export const About = () => {
     <AccordionItem borderTopWidth={0} p={0}>
       <h2>
         <AccordionButton
-          borderColor="#F56565"
+          borderColor="var(--accent)"
           p={0}
           textColor={textColor}
           _hover={{ bg: "transparent" }}
@@ -43,9 +48,20 @@ export const About = () => {
         </i>{" "}
         and <i>OTHER [chinese]</i>. Their poetry is published in places like{" "}
         <i>Cordite</i>, <i>Landfall</i>, <i>Starling</i>, <i>Symposia</i>, and{" "}
-        <i>Ōrongohau | Best New Zealand Poems</i>
+        <i>Ōrongohau | Best New Zealand Poems</i>.{" "}
+        <CustomSpacer height="12px" />
+        Their debut chapbook, <i>moonlight circuit</i>, is out now in{" "}
+        <Link
+          as="button"
+          type="button"
+          onClick={onOpenAupNewPoets}
+          fontStyle="italic"
+          verticalAlign="baseline"
+        >
+          AUP New Poets 12
+        </Link>
         .
-        <CustomSpacer height="30px" />
+        <CustomSpacer height="20px" />
       </AccordionPanel>
     </AccordionItem>
   );

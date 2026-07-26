@@ -7,7 +7,7 @@ interface DropdownJournalProps {
 }
 
 export const DropdownJournal = ({ name, entries }: DropdownJournalProps) => {
-  const linkColor = "#F56565";
+  const linkColor = "var(--accent)";
   const { isOpen, onToggle } = useDisclosure();
   const { colorMode } = useColorMode();
 

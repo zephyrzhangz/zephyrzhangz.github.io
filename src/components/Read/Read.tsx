@@ -6,11 +6,42 @@ import {
   Box,
   Text,
 } from "@chakra-ui/react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { JournalLink } from "./JournalLink";
 import { DropdownJournal } from "./DropdownJournal";
 
 export const Read = () => {
-  const accentColor = "#F56565";
+  const accentColor = "var(--accent)";
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [fade, setFade] = useState({ top: false, bottom: false });
+
+  const updateFade = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const top = el.scrollTop > 4;
+    const bottom = el.scrollTop + el.clientHeight < el.scrollHeight - 4;
+    setFade((prev) =>
+      prev.top === top && prev.bottom === bottom ? prev : { top, bottom },
+    );
+  }, []);
+
+  // Re-measure on mount and whenever the panel resizes (e.g. accordion opens).
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    updateFade();
+    const observer = new ResizeObserver(updateFade);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [updateFade]);
+
+  const maskImage = `linear-gradient(to bottom, ${[
+    fade.top ? "transparent" : "#000",
+    ...(fade.top ? ["#000 32px"] : []),
+    ...(fade.bottom ? ["#000 calc(100% - 32px)"] : []),
+    fade.bottom ? "transparent" : "#000",
+  ].join(", ")})`;
 
   type JournalEntry =
     | {
@@ -36,21 +67,21 @@ export const Read = () => {
       name: "Going Down Swinging",
       url: "https://goingdownswinging.org.au/archives/my-immortal-angst/",
       type: "online",
-      date: "2025-25-8",
+      date: "2025-08-25",
     },
     {
       entryType: "single",
       name: "Ōrongohau | Best New Zealand Poems",
       url: "https://www.bestnewzealandpoems.org.nz/2024-contents/zephyr-zhang/",
       type: "online",
-      date: "2025-31-3",
+      date: "2025-03-31",
     },
     {
       entryType: "single",
       name: "Poetry Aotearoa Yearbook",
       url: "https://www.masseypress.ac.nz/books/poetry-aotearoa-yearbook-2025",
       type: "print",
-      date: "2025-14-8",
+      date: "2025-08-14",
     },
     {
       entryType: "single",
@@ -189,9 +220,14 @@ export const Read = () => {
       (a, b) => Number(b) - Number(a),
     );
 
+    const printRank = (j: JournalEntry) =>
+      j.entryType === "single" && j.type === "print" ? 1 : 0;
+
     return sortedYears.map((year) => ({
       year,
       entries: grouped[year].sort((a, b) => {
+        const rankDiff = printRank(a) - printRank(b);
+        if (rankDiff !== 0) return rankDiff;
         const dateA = a.entryType === "single" ? a.date : a.entries[0].date;
         const dateB = b.entryType === "single" ? b.date : b.entries[0].date;
         return new Date(dateB).getTime() - new Date(dateA).getTime();
@@ -219,29 +255,41 @@ export const Read = () => {
           >
             Use desktop mode for proper formatting.
           </Text>
-          {groupAndSortJournals(journals).map(({ year, entries }) => (
-            <Box key={year} mb={4}>
-              <Text fontWeight="bold" mb={1}>
-                {year}
-              </Text>
-              {entries.map((journal, index) =>
-                journal.entryType === "dropdown" ? (
-                  <DropdownJournal
-                    key={index}
-                    name={journal.name}
-                    entries={journal.entries}
-                  />
-                ) : (
-                  <JournalLink
-                    key={index}
-                    name={journal.name}
-                    url={journal.url}
-                    type={journal.type}
-                  />
-                ),
-              )}
-            </Box>
-          ))}
+          <Box
+            ref={scrollRef}
+            onScroll={updateFade}
+            maxH="300px"
+            overflowY="auto"
+            pr={2} // room for the scrollbar so text isn't clipped
+            sx={{
+              maskImage,
+              WebkitMaskImage: maskImage,
+            }}
+          >
+            {groupAndSortJournals(journals).map(({ year, entries }) => (
+              <Box key={year} mb={4}>
+                <Text fontWeight="bold" mb={1}>
+                  {year}
+                </Text>
+                {entries.map((journal, index) =>
+                  journal.entryType === "dropdown" ? (
+                    <DropdownJournal
+                      key={index}
+                      name={journal.name}
+                      entries={journal.entries}
+                    />
+                  ) : (
+                    <JournalLink
+                      key={index}
+                      name={journal.name}
+                      url={journal.url}
+                      type={journal.type}
+                    />
+                  ),
+                )}
+              </Box>
+            ))}
+          </Box>
         </AccordionPanel>
       </AccordionItem>
     </Box>
