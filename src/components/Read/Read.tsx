@@ -264,6 +264,7 @@ export const Read = () => {
             sx={{
               maskImage,
               WebkitMaskImage: maskImage,
+              "&::-webkit-scrollbar": { width: "6px" },
               "&::-webkit-scrollbar-track": { background: "transparent" },
               "&::-webkit-scrollbar-thumb": {
                 background: "var(--accent)",
