@@ -50,7 +50,7 @@ export const About = ({
         <i>Cordite</i>, <i>Landfall</i>, <i>Starling</i>, <i>Symposia</i>, and{" "}
         <i>Ōrongohau | Best New Zealand Poems</i>.{" "}
         <CustomSpacer height="12px" />
-        Their first chapbook, <i>moonlight circuit</i>, was published in{" "}
+        Their debut chapbook, <i>moonlight circuit</i>, is out now in{" "}
         <Link
           as="button"
           type="button"
