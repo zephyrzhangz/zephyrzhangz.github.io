@@ -258,12 +258,17 @@ export const Read = () => {
           <Box
             ref={scrollRef}
             onScroll={updateFade}
-            maxH="300px"
-            overflowY="auto"
-            pr={2} // room for the scrollbar so text isn't clipped
+            maxH={{ base: "none", md: "300px" }}
+            overflowY={{ base: "visible", md: "auto" }}
+            pr={{ base: 0, md: 2 }} // room for the scrollbar so text isn't clipped (desktop only)
             sx={{
               maskImage,
               WebkitMaskImage: maskImage,
+              "&::-webkit-scrollbar-track": { background: "transparent" },
+              "&::-webkit-scrollbar-thumb": {
+                background: "var(--accent)",
+                borderRadius: "3px",
+              },
             }}
           >
             {groupAndSortJournals(journals).map(({ year, entries }) => (

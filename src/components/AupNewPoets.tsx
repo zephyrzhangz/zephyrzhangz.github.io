@@ -62,7 +62,11 @@ export const AupNewPoets = () => {
           size="sm"
           fontWeight="medium"
           px={5}
-          width="fit-content"
+          width={{ base: "100%", md: "fit-content" }}
+          maxW="100%"
+          whiteSpace={{ base: "normal", md: "nowrap" }}
+          height="auto"
+          py={2}
           color="black"
           bg="var(--accent-highlight)"
           cursor="pointer"
