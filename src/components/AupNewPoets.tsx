@@ -62,11 +62,9 @@ export const AupNewPoets = () => {
           size="sm"
           fontWeight="medium"
           px={5}
-          width={{ base: "100%", md: "fit-content" }}
+          width="fit-content"
           maxW="100%"
-          whiteSpace={{ base: "normal", md: "nowrap" }}
-          height="auto"
-          py={2}
+          whiteSpace="nowrap"
           color="black"
           bg="var(--accent-highlight)"
           cursor="pointer"
@@ -76,7 +74,12 @@ export const AupNewPoets = () => {
           transition="filter 0.2s ease"
           _hover={{ filter: "brightness(0.92)" }}
         >
-          Buy from Auckland University Press&nbsp;↗
+          <Box as="span" display={{ base: "none", md: "inline" }}>
+            Buy from Auckland University Press&nbsp;↗
+          </Box>
+          <Box as="span" display={{ base: "inline", md: "none" }}>
+            Buy from Auckland Uni Press&nbsp;↗
+          </Box>
         </Button>
         <Endorsement accentColor={accentColor} by="Francis Cooke">
           <i>AUP New Poets 12</i> carries on the high standard set by the series
