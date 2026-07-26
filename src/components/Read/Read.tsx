@@ -67,21 +67,21 @@ export const Read = () => {
       name: "Going Down Swinging",
       url: "https://goingdownswinging.org.au/archives/my-immortal-angst/",
       type: "online",
-      date: "2025-25-8",
+      date: "2025-08-25",
     },
     {
       entryType: "single",
       name: "Ōrongohau | Best New Zealand Poems",
       url: "https://www.bestnewzealandpoems.org.nz/2024-contents/zephyr-zhang/",
       type: "online",
-      date: "2025-31-3",
+      date: "2025-03-31",
     },
     {
       entryType: "single",
       name: "Poetry Aotearoa Yearbook",
       url: "https://www.masseypress.ac.nz/books/poetry-aotearoa-yearbook-2025",
       type: "print",
-      date: "2025-14-8",
+      date: "2025-08-14",
     },
     {
       entryType: "single",
@@ -220,9 +220,14 @@ export const Read = () => {
       (a, b) => Number(b) - Number(a),
     );
 
+    const printRank = (j: JournalEntry) =>
+      j.entryType === "single" && j.type === "print" ? 1 : 0;
+
     return sortedYears.map((year) => ({
       year,
       entries: grouped[year].sort((a, b) => {
+        const rankDiff = printRank(a) - printRank(b);
+        if (rankDiff !== 0) return rankDiff;
         const dateA = a.entryType === "single" ? a.date : a.entries[0].date;
         const dateB = b.entryType === "single" ? b.date : b.entries[0].date;
         return new Date(dateB).getTime() - new Date(dateA).getTime();

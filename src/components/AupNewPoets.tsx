@@ -6,7 +6,6 @@ import {
   Box,
   Text,
   Button,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { ExternalLink } from "./ExternalLink";
@@ -25,11 +24,11 @@ const Endorsement = ({
     borderLeft="2px solid"
     borderColor={accentColor}
     pl={3}
-    my={3}
+    my={5}
     fontSize="sm"
   >
-    <Text>{children}</Text>
-    <Text mt={1} fontWeight="medium">
+    <Text lineHeight="tall">{children}</Text>
+    <Text mt={2} fontWeight="medium">
       — {by}
     </Text>
   </Box>
@@ -48,8 +47,33 @@ export const AupNewPoets = () => {
         </AccordionButton>
       </h2>
       <AccordionPanel pb={4}>
-        <i>moonlight circuit</i>, Zephyr's debut chapbook, is out now from
-        Auckland University Press in <i>AUP New Poets 12</i>.
+        <Text>
+          <i>moonlight circuit</i>, Zephyr's debut chapbook, is out now from
+          Auckland University Press in <i>AUP New Poets 12</i>.
+        </Text>
+        <Button
+          as="a"
+          href="https://aucklanduniversitypress.co.nz/aup-new-poets-12/"
+          target="_blank"
+          rel="noopener noreferrer"
+          mt={3}
+          mb={2}
+          rounded="md"
+          size="sm"
+          fontWeight="medium"
+          px={5}
+          width="fit-content"
+          color="black"
+          bg="var(--accent-highlight)"
+          cursor="pointer"
+          display="inline-flex"
+          alignItems="center"
+          justifyContent="center"
+          transition="filter 0.2s ease"
+          _hover={{ filter: "brightness(0.92)" }}
+        >
+          Buy from Auckland University Press&nbsp;↗
+        </Button>
         <Endorsement accentColor={accentColor} by="Francis Cooke">
           <i>AUP New Poets 12</i> carries on the high standard set by the series
           and gives a fuller canvas to three young poets who I know we will read
@@ -76,32 +100,6 @@ export const AupNewPoets = () => {
           light, and sliding into turns of phrase to evoke the night magic they
           know is ever-present.
         </Endorsement>
-        <Button
-          as="a"
-          href="https://aucklanduniversitypress.co.nz/aup-new-poets-12/"
-          target="_blank"
-          rel="noopener noreferrer"
-          mt={2}
-          rounded="md"
-          size="sm"
-          fontWeight="normal"
-          px={5}
-          width="fit-content"
-          color={accentColor}
-          bg="transparent"
-          border={`1px solid ${accentColor}`}
-          cursor="pointer"
-          display="inline-flex"
-          alignItems="center"
-          justifyContent="center"
-          transition="background 0.3s ease, border-color 0.3s ease"
-          _hover={{
-            bg: useColorModeValue("blackAlpha.200", "transparent"),
-            border: `1px solid ${useColorModeValue("black", "white")}`,
-          }}
-        >
-          Buy from Auckland University Press&nbsp;↗
-        </Button>
       </AccordionPanel>
     </AccordionItem>
   );

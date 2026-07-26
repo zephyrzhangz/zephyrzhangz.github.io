@@ -73,7 +73,7 @@ export const Contact = () => {
             <Stack direction={"row"} spacing={2}>
               <Button
                 rounded={"md"}
-                size={"sd"}
+                size={"sm"}
                 fontWeight={"normal"}
                 color={"var(--accent)"}
                 px={5}
