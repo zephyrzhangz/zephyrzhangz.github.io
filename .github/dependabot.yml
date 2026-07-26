@@ -12,11 +12,34 @@ updates:
         update-types:
           - minor
           - patch
-      npm-major:
-        patterns:
-          - "*"
-        update-types:
-          - major
+    # This app runs on Create React App (react-scripts 5), which pins the
+    # React 18 / TypeScript 4.x / Chakra 2 toolchain. Major bumps of these
+    # break the build and require a framework migration, not a dependency bump.
+    ignore:
+      - dependency-name: "react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-dom"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/react-dom"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@chakra-ui/react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "framer-motion"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-icons"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@testing-library/react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/jest"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-scripts"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: github-actions
     directory: "/"
