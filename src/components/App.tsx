@@ -9,7 +9,12 @@ import Content from "./Content";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <ColorModeSwitcher position="fixed" top={2} left={2} zIndex={2} />
+    <ColorModeSwitcher
+      position={{ base: "static", md: "fixed" }}
+      top={2}
+      left={2}
+      zIndex={2}
+    />
     <Content />
   </ChakraProvider>
 );
