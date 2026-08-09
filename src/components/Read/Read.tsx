@@ -8,7 +8,6 @@ import {
 } from "@chakra-ui/react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { JournalLink } from "./JournalLink";
-import { DropdownJournal } from "./DropdownJournal";
 
 export const Read = () => {
   const accentColor = "var(--accent)";
@@ -43,28 +42,23 @@ export const Read = () => {
     fade.bottom ? "transparent" : "#000",
   ].join(", ")})`;
 
-  type JournalEntry =
-    | {
-        entryType: "single";
-        name: string;
-        url: string;
-        poems: string[];
-        type: "online" | "print";
-        date: string;
-      }
-    | {
-        entryType: "dropdown";
-        name: string;
-        entries: {
-          title: string;
-          url: string;
-          date: string;
-        }[];
-      };
+  type JournalEntry = {
+    name: string;
+    url: string;
+    poems: string[];
+    type: "online" | "print";
+    date: string;
+  };
 
   const journals: JournalEntry[] = [
     {
-      entryType: "single",
+      name: "Starling",
+      url: "https://www.starlingmag.com/issue-22/guest-writers",
+      poems: ["Cranium avium"],
+      type: "online",
+      date: "2026-08-04",
+    },
+    {
       name: "Going Down Swinging",
       url: "https://goingdownswinging.org.au/archives/my-immortal-angst/",
       poems: ["my immortal angst"],
@@ -72,7 +66,6 @@ export const Read = () => {
       date: "2025-08-25",
     },
     {
-      entryType: "single",
       name: "Ōrongohau | Best New Zealand Poems",
       url: "https://www.bestnewzealandpoems.org.nz/past-issues/2024-contents/zephyr-zhang/",
       poems: ["with friends like these"],
@@ -80,7 +73,6 @@ export const Read = () => {
       date: "2025-03-31",
     },
     {
-      entryType: "single",
       name: "Poetry Aotearoa Yearbook",
       url: "https://masseypress.ac.nz/products/poetry-aotearoa-yearbook-2025",
       poems: ["What Was Built Over"],
@@ -88,7 +80,6 @@ export const Read = () => {
       date: "2025-08-14",
     },
     {
-      entryType: "single",
       name: "Turbine | Kapohau",
       url: "https://turbinekapohau.org.nz/archive-issues/2024-contents/poetry-zephyr-zhang/",
       poems: [
@@ -99,7 +90,6 @@ export const Read = () => {
       date: "2024-12-11",
     },
     {
-      entryType: "single",
       name: "takahē",
       url: "https://www.takahe.org.nz/silly-goose/",
       poems: ["silly goose"],
@@ -107,7 +97,6 @@ export const Read = () => {
       date: "2024-12-08",
     },
     {
-      entryType: "single",
       name: "Sweet Mammalian",
       url: "https://www.sweetmammalian.com/issue-eleven/zephyrzhang",
       poems: ["Be gay, do crime"],
@@ -115,7 +104,6 @@ export const Read = () => {
       date: "2024-11-09",
     },
     {
-      entryType: "single",
       name: "Frontier Poetry",
       url: "https://www.frontierpoetry.com/2024/10/25/zephyr-zhang/",
       poems: ["Object Permanence"],
@@ -123,7 +111,6 @@ export const Read = () => {
       date: "2024-10-25",
     },
     {
-      entryType: "single",
       name: "Cartridge Lit",
       url: "https://cartridgelit.com/2024/10/23/animal-crossing/",
       poems: ["why are you playing animal crossing instead of talking to me"],
@@ -131,15 +118,13 @@ export const Read = () => {
       date: "2024-10-23",
     },
     {
-      entryType: "single",
-      name: "The Spinoff (11/10)",
+      name: "The Spinoff",
       url: "https://thespinoff.co.nz/books/11-10-2024/the-friday-poem-the-dancer-by-zephyr-zhang",
       poems: ["the dancer"],
       type: "online",
       date: "2024-10-11",
     },
     {
-      entryType: "single",
       name: "Poetry Lab Shanghai",
       url: "https://www.poetrylabshanghai.com/post/autumn24#:~:text=is%20a%20student.-,The%20air%2C%20thinning,-by%20Zephyr%20Zhang",
       poems: ["The air, thinning"],
@@ -147,31 +132,15 @@ export const Read = () => {
       date: "2024-09-16",
     },
     {
-      entryType: "single",
       name: "Symposia",
       url: "https://www.symposiamagazine.com/issue02/zephyr-zhang",
-      poems: ["i dump my car for a horse and regret it for the rest of my life"],
+      poems: [
+        "i dump my car for a horse and regret it for the rest of my life",
+      ],
       type: "online",
       date: "2024-07-05",
     },
     {
-      entryType: "single",
-      name: "Rat World",
-      url: "https://www.ratworldmag.com/shop/p/rat-world-issue-seven",
-      poems: [], // TODO: title not published online
-      type: "print",
-      date: "2024-07-04",
-    },
-    {
-      entryType: "single",
-      name: "Landfall",
-      url: "https://www.otago.ac.nz/press/books/landfall-247-spring-2024",
-      poems: ["with friends like these"],
-      type: "print",
-      date: "2024-05-27",
-    },
-    {
-      entryType: "single",
       name: "Cordite",
       url: "http://cordite.org.au/poetry/treat/cucumis-sativus-parvus/",
       poems: ["Cucumis Sativus Parvus"],
@@ -179,25 +148,6 @@ export const Read = () => {
       date: "2024-07-05",
     },
     {
-      entryType: "single",
-      name: "The Spinoff (08/03)",
-      url: "https://thespinoff.co.nz/books/08-03-2024/the-friday-poem-you-ask-me-if-i-still-love-you-by-zephyr-zhang",
-      poems: ["you ask me if I still love you"],
-      type: "online",
-      date: "2024-07-05",
-    },
-    {
-      entryType: "single",
-      name: "bad apple",
-      url: "https://badapple.gay/2023/11/22/i-used-to-shop/",
-      poems: [
-        "i used to shop at newmarket mall until i realised it was a spaceship run by evil aliens and was subsequently abducted",
-      ],
-      type: "online",
-      date: "2023-11-22",
-    },
-    {
-      entryType: "single",
       name: "Rapture: An Anthology of Performance Poetry from Aotearoa New Zealand",
       url: "https://aucklanduniversitypress.co.nz/rapture/",
       poems: ["red"],
@@ -205,7 +155,6 @@ export const Read = () => {
       date: "2023-11-09",
     },
     {
-      entryType: "single",
       name: "Sweet Mammalian",
       url: "https://www.sweetmammalian.com/issue-nine/zephyr-zhang",
       poems: ["sick leave"],
@@ -213,7 +162,6 @@ export const Read = () => {
       date: "2022-11-05",
     },
     {
-      entryType: "single",
       name: "Starling",
       url: "https://www.starlingmag.com/issue-14/zephyr-zhang",
       poems: [
@@ -224,46 +172,17 @@ export const Read = () => {
       type: "online",
       date: "2022-02-13",
     },
-    {
-      entryType: "single",
-      name: "Mayhem",
-      url: "https://web.archive.org/web/20220120163447/https://www.mayhemjournal.co.nz/shop/product/565007/mayhem-2021--issue-9/",
-      poems: [], // TODO: title not published online
-      type: "print",
-      date: "2021-12-10",
-    },
   ];
 
-  function groupAndSortJournals(journals: JournalEntry[]) {
-    const grouped: Record<string, JournalEntry[]> = {};
+  const sections: { label: string; type: JournalEntry["type"] }[] = [
+    { label: "Online", type: "online" },
+    { label: "Print", type: "print" },
+  ];
 
-    journals.forEach((journal) => {
-      const date =
-        journal.entryType === "single" ? journal.date : journal.entries[0].date;
-      const year = date.split("-")[0];
-
-      if (!grouped[year]) grouped[year] = [];
-      grouped[year].push(journal);
-    });
-
-    const sortedYears = Object.keys(grouped).sort(
-      (a, b) => Number(b) - Number(a),
-    );
-
-    const printRank = (j: JournalEntry) =>
-      j.entryType === "single" && j.type === "print" ? 1 : 0;
-
-    return sortedYears.map((year) => ({
-      year,
-      entries: grouped[year].sort((a, b) => {
-        const rankDiff = printRank(a) - printRank(b);
-        if (rankDiff !== 0) return rankDiff;
-        const dateA = a.entryType === "single" ? a.date : a.entries[0].date;
-        const dateB = b.entryType === "single" ? b.date : b.entries[0].date;
-        return new Date(dateB).getTime() - new Date(dateA).getTime();
-      }),
-    }));
-  }
+  const entriesForSection = (type: JournalEntry["type"]) =>
+    journals
+      .filter((journal) => journal.type === type)
+      .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <Box>
@@ -271,14 +190,14 @@ export const Read = () => {
         <h2>
           <AccordionButton borderColor={accentColor}>
             <Box flex="1" textAlign="left">
-              <b>Read</b>&nbsp;&nbsp;↳ Online | ▤ Print
+              <b>Read</b>&nbsp;&nbsp;↳ Selected Work
             </Box>
             <AccordionIcon />
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4} mb={-3}>
           <Text
-            display={{ base: "block", md: "none" }} // Show only in mobile (base to md)
+            display={{ base: "block", md: "none" }}
             mt={-1.5}
             mb={3}
             fontSize={"small"}
@@ -288,9 +207,9 @@ export const Read = () => {
           <Box
             ref={scrollRef}
             onScroll={updateFade}
-            maxH={{ base: "none", md: "300px" }}
+            maxH={{ base: "none", md: "360px" }}
             overflowY={{ base: "visible", md: "auto" }}
-            pr={{ base: 0, md: 2 }} // room for the scrollbar so text isn't clipped (desktop only)
+            pr={{ base: 0, md: 2 }}
             sx={{
               maskImage,
               WebkitMaskImage: maskImage,
@@ -302,27 +221,20 @@ export const Read = () => {
               },
             }}
           >
-            {groupAndSortJournals(journals).map(({ year, entries }) => (
-              <Box key={year} mb={4}>
+            {sections.map(({ label, type }) => (
+              <Box key={type} mb={4}>
                 <Text fontWeight="bold" mb={1}>
-                  {year}
+                  {label}
                 </Text>
-                {entries.map((journal, index) =>
-                  journal.entryType === "dropdown" ? (
-                    <DropdownJournal
-                      key={index}
-                      name={journal.name}
-                      entries={journal.entries}
-                    />
-                  ) : (
-                    <JournalLink
-                      key={index}
-                      name={journal.name}
-                      url={journal.url}
-                      type={journal.type}
-                    />
-                  ),
-                )}
+                {entriesForSection(type).map((journal, index) => (
+                  <JournalLink
+                    key={index}
+                    poems={journal.poems}
+                    name={journal.name}
+                    url={journal.url}
+                    date={journal.date}
+                  />
+                ))}
               </Box>
             ))}
           </Box>
